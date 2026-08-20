@@ -1,260 +1,279 @@
-# OmniSite 프런트엔드
+# OmniSite — 실행 안내
 
-B2G 공간의사결정지원(SDSS) — 갈등시설 입지 선정 파이프라인의 화면.
-백엔드(`BigProject_Back`)가 만든 산출물을 **읽어서 보여주는 것**이 이 앱의 전부다.
-
-> 이 README 는 **실행 방법**만 적는다.
-> 왜 이렇게 만들었는지(설계 결정·되돌린 판단·틀릴 수 있는 지점)는
-> `D:\obsidian_claude\10_OmniSite\01_설계결정\프런트_설계.md` 에 있다.
+> **B2G 공간의사결정지원 시스템(SDSS).** 갈등시설 입지 선정 —
+> GIS 최적화(MCLP) + 다중 에이전트 공청회 시뮬레이션.
+> MVP: 서울 용산구 흡연부스 / 2차: 성동구 재활용정거장.
 >
-> **다른 브랜치 작업물과 합치려는 사람은** 먼저
-> `10_OmniSite\배포후_작업일지\2026-08-05_프런트_변경점_병합안내.md` 를 읽을 것 —
-> 이 브랜치(`main2`)는 프런트 **전면 재작성**이라 줄 단위 merge 가 안 맞는다.
+> **이 문서 하나만 읽고 끝까지 실행할 수 있게 썼습니다.** 다른 문서를 찾아갈 필요가 없습니다.
+
+| 구성요소 | 저장소 | 브랜치 | 주소 |
+|---|---|---|---|
+| 백엔드 (FastAPI) | `BigProject_Back` | `back_deploy` | http://127.0.0.1:8000 |
+| 프런트엔드 (Next.js) | `BigProject_Front` | `main_deploy` | http://localhost:3000 |
 
 ---
 
-## 실행
+## 0. 준비물
+
+| 필요한 것 | 확인 명령 | 비고 |
+|---|---|---|
+| **Docker Desktop** | `docker --version` | 백엔드는 전부 도커 안에서 돕니다 — **로컬 파이썬 불필요** |
+| **Node.js 20.9 이상** | `node --version` | 프런트엔드용. Next 16 이 `engines: >=20.9.0` 을 건다. **Node 24.16 / npm 11.13 에서 실측** |
+| **데이터셋 ZIP** | — | 아래 [1단계](#1-데이터셋-배치) 참조 |
+
+> 🔴 **Docker Desktop 이 실행 중**이어야 합니다. 아이콘이 초록색인지 먼저 보세요.
+> 안 켜져 있으면 `docker compose` 가 `cannot connect to the Docker daemon` 으로 죽습니다.
+
+---
+
+## 1. 데이터셋 배치
+
+원본 데이터는 용량이 커서 소스코드와 **따로** 배포합니다.
+
+```
+BigProject_Back/
+└── datasets/          ← 여기에 ZIP 내용물을 풉니다
+    ├── 흡연/           (MVP 도메인 — 원본 데이터 + 조례)
+    ├── 재활용/         (2차 도메인)
+    ├── EV/
+    ├── 흡연_FIX/       (회귀 기준선 — 5단계 자체점검이 이걸 씁니다)
+    ├── 재활용_FIX/
+    ├── region_data/    (지적도 · 행정경계 · 크로스워크)
+    ├── search_cache/
+    └── step1_output/ ~ step4_output/   (정본 산출물)
+```
+
+**받는 곳** — 실행 가이드에 공지된 Google Drive:
+<https://drive.google.com/file/d/1TAxlK0tCu_a1T4bZffj-yaKXggm0P68A/view?usp=drive_link>
+
+### 🔴 제출본 ZIP 을 쓰는 경우 — 경계 SHP 3개를 따로 넣어야 합니다
+
+제출 규정(100MB 상한)에 맞추려고 제출본에서는 **공개 행정경계 파일 3개를 뺐습니다.**
+우리가 만든 데이터가 아니라 통계청이 배포하는 원본이고, 이 셋만 304.7MB 입니다.
+
+| 빼놓은 파일 | 크기 | 필수 |
+|---|---|---|
+| `datasets/region_data/BND_ADM_DONG_PG.shp` | 129MB | ✅ 필수 |
+| `datasets/region_data/BND_SIGUNGU_PG.shp` | 93MB | ✅ 필수 |
+| `datasets/region_data/BND_SIDO_PG.shp` | 83MB | 선택 |
+
+같은 폴더의 `.dbf`·`.shx`·`.prj` 는 그대로 들어 있으니 **`.shp` 3개만** 위 Drive 링크의
+`datasets.zip` 에서 꺼내 같은 자리에 놓으면 됩니다.
+
+> **없으면 어떻게 되나**: 서버는 정상 기동하고 화면도 뜹니다. 대신 파이프라인 STEP2 의
+> 공간조인이 대상 폴리곤을 못 찾아 **지표가 전부 0** 이 됩니다. 안 터지고 값만 틀리므로
+> 5단계 자체점검(`check_fixture.py`)을 꼭 돌려 확인하세요.
+
+---
+
+## 2. 환경변수 `.env`
+
+`.env.example` 을 복사한 뒤 값을 채웁니다. **이 파일이 없으면 서버가 기동조차 못 합니다**
+(`DATABASE_URL`·`REDIS_URL`·`SECRET_KEY` 는 기본값을 일부러 두지 않았습니다 —
+기본값이 있으면 빠뜨렸을 때 조용히 약한 설정으로 뜹니다).
 
 ```bash
+# Windows
+copy .env.example .env
+
+# macOS / Linux
+cp .env.example .env
+```
+
+### 반드시 채워야 하는 5개
+
+| 키 | 값 | 설명 |
+|---|---|---|
+| `POSTGRES_PASSWORD` | 임의의 긴 문자열 | 도커 DB 비밀번호. **`postgres` 같은 약한 값 금지** |
+| `REDIS_PASSWORD` | 임의의 긴 문자열 | 도커 Redis 비밀번호 |
+| `DATABASE_URL` | `postgresql://postgres:<POSTGRES_PASSWORD>@127.0.0.1:5432/omnisite` | 위 비밀번호와 **같은 값**을 넣습니다 |
+| `REDIS_URL` | `redis://:<REDIS_PASSWORD>@127.0.0.1:6379/0` | 위와 동일 |
+| `SECRET_KEY` | 임의의 64자 hex | JWT 서명 키 |
+
+비밀번호·키 생성 한 줄 (아무 데서나):
+
+```bash
+python -c "import secrets; print(secrets.token_hex(32))"
+```
+
+### 선택 — 기능별로 필요한 키
+
+| 키 | 없으면 못 하는 것 |
+|---|---|
+| `OPENAI_API_KEY` | 감리 AI(STEP1)·공청회 토론(화면5). **`fixture` 모드 시연에는 불필요** |
+| `VWORLD_KEY` / `VWORLD_API_KEY` | 주소→좌표 지오코딩(새 지역 데이터를 넣을 때만) |
+| `KAKAO_REST_API_KEY` | 지도 로드뷰 |
+| `LAW_GO_KR_OC` / `DATA_GO_KR_KEY` | 상위법 자동 검색 |
+
+> 🔴 **`localhost` 대신 `127.0.0.1` 을 쓰세요.** `localhost` 는 IPv6(`::1`)로 먼저 풀리는데
+> 도커가 IPv4 에만 바인딩해서 **요청 하나가 130초** 걸린 적이 있습니다.
+> (코드가 자동 교정하고 경고 로그를 남기지만, 애초에 안 겪는 게 낫습니다.)
+
+---
+
+## 3. 백엔드 실행 — 2줄
+
+```bash
+cd BigProject_Back
+
+docker compose up -d --build
+docker compose run --rm api python scripts/bootstrap_db.py --yes
+```
+
+* 1줄째: DB(PostgreSQL+PostGIS) · Redis · API 컨테이너 3개를 빌드하고 띄웁니다.
+  첫 실행은 이미지 빌드 때문에 몇 분 걸립니다.
+  **빈 DB 라면 `omnisite_seed.sql.gz` 가 자동으로 복원**되므로 따로 할 일이 없습니다.
+* 2줄째: 시드 이후에 추가된 테이블(`run_records` 등)을 만들고 스키마를 맞춥니다.
+  **시드를 복원했어도 반드시 한 번 칩니다** — 안 치면 조용히 몇 개가 빠집니다.
+
+열립니다 → **<http://127.0.0.1:8000/docs>**
+
+> `docker compose` 가 없다는 오류가 나면 구버전입니다. `docker-compose`(하이픈)로 바꿔 치세요.
+> 운영 배포 스크립트도 하이픈 쪽을 씁니다.
+
+**중지 / 재시작**
+
+```bash
+docker compose logs -f api     # 로그 보기
+docker compose restart api     # API 만 재시작
+docker compose down            # 전부 정지 (데이터는 볼륨에 남습니다)
+```
+
+---
+
+## 4. 프런트엔드 실행 — 3줄
+
+```bash
+cd BigProject_Front
+
+copy .env.example .env.local     # macOS/Linux: cp .env.example .env.local
 npm install
-npm run dev          # http://localhost:3000
+npm run dev
 ```
 
-백엔드가 떠 있어야 화면에 값이 나온다. 없으면 각 화면이 **비어 있다고 말한다** —
-가짜 값으로 채우지 않는다.
+열립니다 → **<http://localhost:3000>**
 
-```bash
-# 백엔드 (다른 터미널, BigProject_Back 에서)
-python -m uvicorn app.main:app --port 8000
-```
+**2026-08-20 실측** — 방금 내려받은 폴더(`node_modules` 없음, `.env.local` 없음)에서
+그대로 확인했습니다: `npm install` 501개 15초 · `npm ci` 501개 22초, 취약점 0건,
+`npm run dev` 는 4.6초 만에 `Ready`. `npm install` 이 `package-lock.json` 을
+건드리지 않는 것도 확인했으므로 **둘 중 아무거나 써도 됩니다**(재현성이 필요하면 `npm ci`).
 
-빌드·검사:
-
-```bash
-npm run build        # 타입 검사 포함
-npx tsc --noEmit
-npm run lint
-```
-
-🔴 `npm run dev` 가 떠 있는 채로 `npm run build` 를 돌리면 **둘이 같은 `.next/` 를 쓴다.**
-빌드가 dev 산출물을 덮어써서 그 뒤로 dev 서버가 500(`Unexpected token ':'`)을 낸다 —
-코드 오류처럼 보이지만 아니다. `.next` 를 지우고 dev 를 다시 띄우면 된다.
-
-🔴 **더 조용한 변종이 있다(실측 2026-08-05).** 서버 컴포넌트/클라이언트 컴포넌트의
-**렌더가 한 번 던지면**(예: 지운 변수를 그대로 참조) 소스를 고쳐도 dev 서버가
-**클라이언트 부트스트랩을 회복 못 할 수 있다.** 이때 `GET / 200` 이고 화면도
-정상으로 보이는데 **하이드레이션이 안 붙어 모든 버튼이 죽어 있다.**
-콘솔에는 `[Fast Refresh] performing full reload` 만 반복되고 **에러는 없다**
-(SSR 에서 던졌으니 에러는 터미널에만 있다).
-
-진단은 이 한 줄이다 — 버튼을 의심하기 전에 먼저 본다.
-
-```js
-Object.keys($0).filter(k => k.startsWith("__react"))   // [] 면 하이드레이션 실패
-```
-
-`[]` 라면 그 페이지에서 관찰한 UI 근거는 **전부 무효**다. 다른 라우트를 하나 열어
-국소/전역을 가르고, 전역이면 `.next` 삭제 + dev 재시작.
-
-요구 버전: Node 24 / npm 11 에서 실측 확인. Next 16.2.10 · React 19.2.4 · Tailwind 4.
-
----
-
-## 백엔드 주소 설정
-
-`.env.local` (없으면 `.env.example` 을 복사):
+`.env.local` 은 키가 **하나뿐**이고 기본값이 이미 맞습니다:
 
 ```
 OMNISITE_API_ORIGIN=http://127.0.0.1:8000
 ```
 
-- `NEXT_PUBLIC_` 접두사를 **쓰지 않는다.** 이 값은 브라우저 번들에 들어가면 안 된다.
-- 브라우저는 항상 같은 출처(`/api/v1/pipeline/...`)로만 부르고,
-  실제 백엔드 주소는 `next.config.ts` 의 rewrite 안에서만 안다.
-  백엔드가 다른 호스트로 가도 **프런트 코드는 안 바뀐다.**
+> ⚠ 실은 **`.env.local` 이 없어도 뜹니다** — `next.config.ts` 가 같은 값을 기본값으로
+> 들고 있습니다. 그래도 1줄째를 남겨 둔 이유는, 백엔드를 다른 주소에 두는 순간
+> 고칠 파일이 있어야 하는데 그때 `next.config.ts` 를 고치게 하면 안 되기 때문입니다.
+>
+> 브라우저는 백엔드 주소를 모릅니다 — 항상 같은 출처(`/api/v1/...`)로만 부르고
+> Next.js rewrite 가 위 주소로 넘깁니다. 백엔드를 다른 호스트에 두더라도
+> **이 값 한 줄만** 바꾸면 됩니다.
+
+> 🔴 **`npm run dev` 를 띄운 채로 `npm run build` 를 돌리지 마세요.** 둘이 같은 `.next/`
+> 를 써서, 빌드가 dev 산출물을 덮어쓰면 그 뒤로 dev 서버가 500(`Unexpected token ':'`)
+> 을 냅니다. 코드 오류처럼 보이지만 아닙니다 — `.next` 를 지우고 dev 를 다시 띄웁니다.
 
 ---
 
-## 화면
+## 5. 제대로 떴는지 확인 (3분)
 
-라우트 이름에 **백엔드 STEP 번호(2 · 3-1 · 4-2 …)를 쓰지 않는다.**
-화면 번호와 STEP 번호는 다른 체계다 — 섞으면 서로를 가리키는 문서가 전부 틀어진다.
+```bash
+# ① API 문서가 열리는가
+curl http://127.0.0.1:8000/docs
 
-| 화면 | 경로 | 읽는 산출물 | 상태 |
-|---|---|---|---|
-| 1 데이터 입력 | `/` | (없음) | 실행 생성 + **실행 방식(`fixture`/`hitl`) 선택**. 업로드는 API 가 없다 |
-| 진행 현황 | `/progress` | `status.json` · `run.log` | 실동작 (폴링 + 로그 + 게이트 안내 링크) |
-| 2 감리 확인 | `/audit` | `reviewed` | **게이트A 답변** + 산출물 표시 |
-| 2b 배제 근거 | `/audit/exclusion` | `reviewed` · `clean_report` · `report` · `exclusion` | 실동작 (읽기 전용) |
-| 3 가중치 | `/weights` | `weight_set` · `report` | **게이트B 답변** + 산출물 표시 |
-| 4 위치 선정 | `/sites` | `score_grid` · `topN` · `report` | **완료** — 명세 v7 8쪽 항목별 대조 |
-| 5 갈등 예측 | `/hearing` | (없음) | 스텁. 서버 미연결 · **담당 인계** |
-| 6 보고서 | `/report` | `report` · `topN` · `clean_report` | 실동작 · **담당 인계** |
+# ② 참조 데이터가 다 있는가  → [] 가 나와야 정상
+docker compose exec api python -c "from app.config import missing_reference_files; print(missing_reference_files(required_only=True))"
 
-✅ **`fixture` 완주** (2026-08-05) — `r_20260805_005` 약 82초 · `r_20260805_006` 8/8.
+# ③ 회귀 기준선과 값이 같은가 → 57/57 이 나와야 정상
+docker compose exec api python app/tools/check_fixture.py 흡연
+```
 
-✅ **`hitl` 완주 — 게이트 두 개를 브라우저에서 답해서** (2026-08-05) — `r_20260805_012`.
-화면 1(`hitl` 선택) → ⏸게이트A(화면 2, 질문 4건) → STEP2 · 3-1 → ⏸게이트B(화면 3,
-지표 6건) → STEP3-2 · 4-1 · 4-2 · 4-3 → `succeeded` · 산출물 8/8. **CLI 재실행 0회.**
+②에서 `행정동 경계 SHP`·`시군구 경계 SHP` 가 나오면 **1단계의 `.shp` 3개를 안 넣은 것**입니다.
 
-🔴 화면 2·3 에는 **층이 둘 있다.** 위는 `status.json > gate` 의 질문 폼(계산 **전**
-입력), 아래는 산출물(계산 **후** 결과). 게이트가 열려 있는 동안 아래층은 대개
-비어 있거나 직전 실행 값이다 — **빈 값을 임시로 채우지 않는다.**
-
-🔴 **1차 목표는 화면 4 까지다** (2026-08-05). 화면 5·6 은 백엔드·프런트 양쪽 다
-팀원 담당이다. 이 저장소는 두 화면의 **자리와 배선점만 만들어 두었다** —
-화면 4 하단 「갈등 예측 실행 (미배선)」 버튼의 `disabled` 를 떼고 `onClick` 을 달면
-된다(넘길 `PNU`·좌표는 이미 `selected` 상태에 있다). 인계 내용은
-[[프런트_설계]] §17.4.
+③은 LLM 을 한 번도 부르지 않는 순수 대조입니다(비용 0). 후보 필지 수·배제 면적·
+가중치까지 기준선과 대조하므로, 여기가 57/57 이면 파이프라인 전체가 정상입니다.
 
 ---
 
-## API
+## 6. 화면 흐름
 
-`pipeline_run_contract.md` 가 유일한 기준이다. 계약에 없는 경로를 프런트가 먼저 부르지 않는다.
-
-**지금 부르는 것 — 여섯 개. 이게 전부다.**
-
-| 메서드 | 경로 | 용도 |
+| 화면 | 하는 일 | 필요한 것 |
 |---|---|---|
-| POST | `/api/v1/pipeline/runs` | 실행 생성 → `202 {run_id}`. 본문 `{domain, mode}` |
-| GET | `/api/v1/pipeline/runs/{run_id}` | 상태 조회. `failed` 도 **HTTP 200** 이다 |
-| POST | `/api/v1/pipeline/runs/{run_id}/hitl/audit` | 게이트A 답변 (화면 2) |
-| POST | `/api/v1/pipeline/runs/{run_id}/hitl/weight` | 게이트B 답변 (화면 3) |
-| GET | `/api/v1/pipeline/runs/{run_id}/artifacts/{name}` | 산출물 |
-| GET | `/api/v1/pipeline/runs/{run_id}/log[?tail=N]` | 실행 로그 (백엔드 `836455e`) |
+| 1 업로드 | 도메인별 원본 데이터·조례 업로드 | — |
+| 2~3 감리·정제 | 감리 AI 가 데이터 의도·배제반경 제안 → **사람이 확정(HITL)** | `OPENAI_API_KEY` |
+| 4 입지 선정 | MCLP 로 후보지 Top-N 산출, 지도에서 선택 | 경계 SHP |
+| 5 공청회 | 선택한 입지로 다중 에이전트 토론 (A 대립형 / B 다인형) | `OPENAI_API_KEY` |
+| 6 보고서 | PDF · HWPX 다운로드 | — |
 
-게이트 응답(200)의 본문은 **답변 직후의 `status.json`** 이다 — 이미 `running` 이고
-`gate` 키가 없다. 그대로 현재 run 으로 쓰면 폴링이 저절로 재개된다.
+**API 키 없이 시연하려면** 파이프라인 실행 모드를 `fixture` 로 두세요 —
+미리 고정해 둔 기준선을 그대로 재생하므로 LLM 을 부르지 않고 화면 5까지 갑니다
+(흡연 약 95초). 모드는 실행 요청(`POST /api/v1/pipeline/runs`)의 `mode` 필드입니다.
 
-🔴 **답변 본문의 `run_id` 를 공용 상태가 덮어쓰지 않는다.** 폼이 자기가 보고 있는
-run 의 id 를 넣고, 경로와 다르면 400 이 난다 — 그 400 이 "화면이 다른 run 을 보고
-있다" 는 신호다. 덮어쓰면 신호가 사라지고 남의 run 에 답이 들어간다(계약 7-3b).
-
-산출물 화이트리스트 8종 — `reviewed` · `clean_report` · `candidates` · `weight_set` ·
-`report` · `topN` · `exclusion` · `score_grid`.
-
-🔴 `exclusion` 은 나중에 올라갔다(백엔드 커밋 `ea4bef3`, 2026-08-04). **그 이전에 만든
-run 의 `status.json` 에는 이 키가 없다** — 산출물 목록은 run 생성 시점에 굳는다.
-그래서 옛 run 을 열면 화면 2b 의 「최종 판정」 열이 `—` 로 남고, 화면이 그 사유를 적는다.
-감리값(`exclusion_type`)으로 대신 채우지 않는다 — 그건 제안이지 판정이 아니다.
-
-🔴 **`/log` 응답만 "가공하지 않고 그대로" 의 예외다.** 절대경로·계정명·API 키가
-`<repo>` · `<home>` · `<마스킹:이름>` 으로 **마스킹**돼 나온다. 로그가 없으면
-404 가 아니라 **200 + 빈 본문**(빈 문자열을 오류로 읽지 않는다), `tail=0` 은 **422**
-(전체가 아니다 — 전체를 원하면 생략), 락을 안 걸어 **마지막 줄이 잘릴 수 있다.**
-
-**없는 것:** 업로드 · 감리 실행 · 실행 목록 · 시뮬레이션.
-그래서 해당 화면은 비워 두고 **왜 비었는지 화면에 적는다.**
-
-🔴 **`/api/v1/audit/*` 는 화면 2 의 감리가 아니다 — 이름만 같다.** 실제로 서버에
-등록돼 있고(`app/main.py:92-94`) 살아 있지만, 내용은 **준공 공문 PDF OCR + RAG
-실사례 분류**(`POST /verify`)와 **검증 판례 저장**(`POST /save`)이다. 작성자도
-다르고(`audit.py` docstring), `Depends(get_db)` 로 DB 가 필요하며,
-`next.config.ts` 의 rewrite 가 `/api/v1/pipeline/*` 하나뿐이라 **브라우저에서
-닿지도 않는다.** 경로 이름만 보고 "감리 API 가 있네" 라고 읽으면 안 된다.
-화면 2 의 감리(STEP1)를 도는 HTTP 경로는 **여전히 없다.**
-
-## HITL 은 게이트다 — 고쳐서 재실행하는 게 아니다
-
-`queued → running → awaiting_hitl → running → … → succeeded | failed`
-
-게이트는 **두 곳뿐**이다 — **게이트A**(감리 확정) · **게이트B**(집계반경 · 가중치).
-`gate` 키는 `awaiting_hitl` 일 때만 붙고 그 외엔 **키 자체가 없다**(`null` 이 아니다).
-
-실행 계획(계약 7-1):
-
-```
-mode: fixture   2 · 3-1 · 3-2 · 4                              게이트 없음 — 무입력 완주
-mode: hitl      ⏸audit · 2 · 3-1 · propose · ⏸weight · 3-2 · 4
-```
-
-- 🔴 **게이트A 는 실행의 맨 앞이다.** 확정 대상은 STEP1(감리) 결과지만 STEP1 자체는
-  이 run 이 돌리지 않는다. 그래서 게이트A 에서 멈춘 run 은 **단계가 하나도 시작되지
-  않은 상태**로 보인다 — 고장이 아니다.
-  ✅ `r_20260805_012` 로 실측 확인 — 게이트A 정지 시점에 전 step 이 `idle` 이었다.
-- **`fixture` 가 기본값이다.** `hitl` 은 화면 1 에서 고를 수 있다. 기본을 `fixture`
-  로 둔 것은 회귀 기준선이기 때문이고, `hitl` 은 두 번 멈추므로 모르고 고르면
-  멈춘 채 방치된다. **라디오 라벨에 서버가 받는 값을 그대로 쓴다** — 「빠름/느림」
-  같은 말로 바꾸면 400 사유의 낱말과 화면의 낱말이 안 맞아 사람이 못 잇는다.
-- 🔴 **`awaiting_hitl` 에서 폴링을 멈춘다.** 서버는 사람이 답할 때까지 **영영** 안 움직인다.
-  `isLive()` 를 `!isFinished` 로 고쳐 쓰면 그 즉시 무한 폴링이다.
-- 🔴 **확정은 게이트 단위 배치**다. 1건씩 보내면 전 슬라이더 합계 검증이 불가능해지고,
-  검증이 빠지면 전 후보 점수가 0 이 된다(백엔드 실제 사고).
-- 🔴 **화면 2b 에 「뒤집기」 버튼을 붙이지 않는다.** 점·면 판정은 **STEP4** 에서 계산돼
-  두 게이트를 다 지난 뒤에 생긴다 — 되돌려 보낼 게이트가 없다. 표가 다 그려져 있어
-  "버튼만 붙이면 된다"고 읽히는 자리라 코드에도 주석을 박아 뒀다.
-- `gate.questions[]` 는 평평한 배열이고 원소마다 `kind` 가 있다(게이트A `exclusion` ·
-  `intent` · `code_prefix`, 게이트B `weight`). 흡연 실측 A 4건 · B 6건.
-  🔴 **`kind` 로 좁힌다. `gate.id` 로 좁히지 않는다** — 게이트A 하나에 3종이 섞여
-  있어서, id 로 통째로 캐스팅하면 그 구분이 사라진다(`gate.ts` 의 타입 가드를 쓸 것).
-
-**게이트 판별 조건은 세 개다** — `status === "awaiting_hitl"` · `gate` 존재 ·
-`gate.id` 일치. 하나라도 빠뜨리면 화면이 거짓말한다. status 만 보면 서버가 gate 를
-안 실었을 때 **빈 폼**이 뜨고, `gate.id` 를 안 보면 게이트B 에서 멈춘 run 을 화면 2 가
-자기 차례로 오해해 `hitl/audit` 을 쏜다. 서버가 400 으로 막지만 **그건 막힌 것이지
-화면이 맞은 게 아니다.** `gate.ts > openGate()` 를 쓰면 된다.
-
-**의미가 다른 값을 같은 위젯으로 합치지 않는다** — 계약이 구분하는 것을 UI 가
-뭉개면 그 구분은 사라진다.
-
-| 계약의 구분 | 화면 위젯 |
-|---|---|
-| `radius_m: null`(반경 없는 면 배제) ≠ **키 생략**(안 건드림) | 3-way 라디오 |
-| `slider_proposed: null`(제안 없음) ≠ `0`(**그 지표 제외**) | 제안 없으면 키를 안 만든다 |
-| `conflict` 지표는 사람이 봤다는 표시가 필요 | 확인 체크박스 (안 켜면 전송 거부) |
-| `editable:false` | 🔒 보여주되 **본문에 안 싣는다**(실으면 400) |
-| `admin` 지표(`radius_required:false`) | 반경 칸을 **안 만든다**(보내면 400) |
-
-**제출 버튼을 조건부 `disabled` 로 만들지 않는다.** 못 보낼 이유가 있으면 버튼을
-막는 게 아니라 **한국어 사유**를 그 자리에 띄운다 — `disabled` 는 왜 못 누르는지를
-안 알려준다. 서버가 400 을 줘도 게이트는 **그대로 열려 있으므로**, 게이트 답변
-함수는 오류를 **삼키지 않고 던진다**(`start` 와 다르다).
-
-답변을 보낼 때의 함정은 `src/lib/omnisite/pipeline.ts` 헤더에 모아 뒀다
-(본문 `run_id` 필수 · `radius_m: null` ≠ 키 생략 · 슬라이더는 `-1~+1` 그대로 · 409 = 점유).
+| 모드 | 뜻 | LLM |
+|---|---|---|
+| `fixture` | 고정 기준선 재생 (시연용, 대기 없음) | 호출 0회 |
+| `hitl` | 프리셋 데이터 + 사람이 게이트에서 값 확정 | 호출함 |
+| `full` | 업로드한 데이터로 STEP0부터 전부 | 호출함 |
 
 ---
 
-## api-samples/
+## 7. 자주 나는 오류
 
-실제 응답 실물(run `r_20260804_003`)을 그대로 보관한 폴더다. 타입은 여기서 뽑았다.
+| 증상 | 원인 | 처치 |
+|---|---|---|
+| 기동 시 `RuntimeError: … .env.example 을 복사…` | `.env` 없음/키 누락 | 2단계 |
+| `POSTGRES_PASSWORD 를 .env 에 설정할 것` | compose 가 비밀번호를 못 찾음 | 2단계 |
+| `cannot connect to the Docker daemon` | Docker Desktop 미실행 | 도커 켜기 |
+| 화면은 뜨는데 **지표가 전부 0** | 경계 `.shp` 3개 없음 | 1단계 · 5단계 ② |
+| `relation "…" does not exist` | 부트스트랩 안 함 | 3단계 2줄째 |
+| 요청 하나가 **130초** 걸림 | `.env` 에 `localhost` 를 씀 | `127.0.0.1` 로 |
+| 화면1 에 **「도메인 목록을 못 받았습니다 · 500 /api/v1/upload/domains」** | 백엔드가 안 떠 있음 | 3단계 먼저. 백엔드를 띄운 뒤 화면의 **「다시 시도」** |
+| 화면5 가 **HTTP 500** 인데 백엔드는 멀쩡 | 프런트 프록시 타임아웃 (기본 30초) | **이미 6분으로 늘려 두었습니다**(`next.config.ts` 의 `proxyTimeout`). 그래도 나면 백엔드 응답이 6분을 넘긴 것 |
+| 프런트 `npm install` 실패 | Node 버전 | Node 20.9 이상 |
+| dev 서버가 500 `Unexpected token ':'` | dev 를 띄운 채 `build` 를 돌림 | `.next` 삭제 후 dev 재시작 (4단계) |
+| 콘솔에 `UnicodeEncodeError` | Windows cp949 콘솔 | `set PYTHONIOENCODING=utf-8` |
 
-🔴 **`src/` 밖에 둔다. import 가 불가능해야 한다** — API 가 죽었을 때 조용히
-샘플로 떨어지는 코드를 애초에 못 쓰게 만든다.
-
----
-
-## 지도
-
-외부 지도 라이브러리를 쓰지 않는다. `src/components/map/GridMap.tsx` 가 canvas 로 직접 그린다.
-배경 타일은 **꺼도 되고**, 타일을 못 받으면 그 사실을 화면에 표시한다 —
-격자와 후보지는 타일 없이도 정확하다(좌표는 산출물에서 온다).
-
-`score_grid.crs !== "EPSG:4326"` 이면 **아예 안 그린다.** 좌표계 추측은 이 프로젝트에서
-실제로 사고가 난 지점이다 — 억지로 그리면 지도가 조용히 틀린다.
-
-**지도는 액자 안에 있다.** 도구줄 / 지도+사이드바 / 범례가 한 상자이고 높이는
-`clamp(340px, 56vh, 600px)` 로 뷰포트에 묶는다(고정 px 면 세로가 짧은 화면에서
-아래 버튼이 밀려난다). 사이드바는 **탭 2개**(후보 목록 / 선택 상세)이고, 커버율은
-액자 **아래** 가로 2단에 있다 — 커버율은 한 후보의 성질이 아니라 **조합 전체의
-성질**이라 지도 옆에 두면 "지금 고른 후보의 커버율"처럼 읽힌다.
-
-🔴 **`globals.css` 에 `position`·`display` 같은 규칙을 추가하지 말 것.** Tailwind 4 는
-유틸리티를 `@layer utilities` 에 넣고 **레이어 없는 규칙이 레이어 있는 규칙을 무조건
-이긴다** — 그 속성의 Tailwind 유틸리티가 영영 안 먹는다는 뜻이다. 이 함정에 두 번
-걸렸다(`.btn-*:disabled`, `.map-canvas`). 특히 `.map-canvas { position:absolute;
-inset:0 }` 는 지도를 뷰포트 전체로 키워 사이드바와 버튼을 통째로 가렸다(2026-08-05
-실측: 액자 836×560 인데 지도가 876×856). **규칙째 지웠다. 되살리지 말 것.**
+> **백엔드 없이 프런트만 먼저 띄워도 됩니다.** 2026-08-20 실측 — 화면은 정상적으로
+> 그려지고 흰 화면이 되지 않으며, 브라우저 콘솔에도 에러가 남지 않습니다. 대신 서버에서
+> 값을 받아야 하는 자리마다 **화면 안에 한국어로 사유와 HTTP 코드를 적습니다**
+> (예: 화면1 프리셋 모드 → 「도메인 목록을 못 받았습니다 / 500 /api/v1/upload/domains
+> — Internal Server Error / 다시 시도」). 가짜 값으로 채우지 않는 것이 이 앱의 원칙입니다.
+> 로그인은 게시판에서만 필요하므로 파이프라인 화면은 로그인 없이 그대로 볼 수 있습니다.
 
 ---
 
-## 설치돼 있지만 안 쓰는 패키지
+## 8. 더 읽을 것 (실행에는 필요 없음)
 
-지우지 않은 이유를 적어 둔다. 이유가 사라지면 지울 것.
+**어느 저장소에 있는지**를 같이 적습니다 — 두 저장소를 다 받지 않았으면 없는 파일입니다.
 
-- `@microsoft/fetch-event-source` — 화면 5 용. 시뮬레이션이 POST + 스트림이라
-  `EventSource`(GET 전용)로는 안 된다. 서버가 열리면 쓴다.
-- `jspdf` — 화면 6 은 `window.print()` 를 쓴다. canvas PDF 는 글자를 이미지로 만들고
-  한글 폰트를 따로 실어야 한다.
-- `driver.js` · `lightningcss` — 이전 구현의 잔재. 참조하는 코드가 없다.
+| 문서 | 저장소 | 내용 |
+|---|---|---|
+| `CLAUDE.md` | `BigProject_Back` | 설계 원칙 · **실제로 겪은 함정 목록** |
+| `docs/개발자_협업_가이드.md` | `BigProject_Back` | 팀 내부 협업 규칙 (백엔드 옛 README) |
+| `docs/api_schema.md` | `BigProject_Back` | API 스키마 |
+| `pipeline_run_contract.md` | `BigProject_Back` | 파이프라인 실행 API 계약 (프런트↔백엔드) |
+| `docs/프런트엔드_개발_가이드.md` | `BigProject_Front` | 화면별 배선 · 게이트 판별 조건 · Tailwind 4 레이어 함정 (프런트 옛 README) |
+
+> 프런트 저장소의 `CLAUDE.md` 는 AI 코딩 도구용 한 줄짜리 파일이라 위 백엔드 `CLAUDE.md`
+> 와 다른 문서입니다.
+
+---
+
+## 9. 기술 스택
+
+**백엔드** FastAPI · SQLAlchemy 2.0 (asyncpg) · PostgreSQL + PostGIS · Redis ·
+GeoPandas / Shapely · LangChain + LangGraph · pgvector · playwright(PDF)
+
+**프런트엔드** Next.js 16.3 (Turbopack) · React 19.2 · TypeScript 6 · Tailwind CSS 4 ·
+지도는 **의존성 없이 canvas 직접 렌더링** · Sentry · `@microsoft/fetch-event-source`(화면5 SSE)
+
+> 🔴 **정정 (2026-08-20).** 이 줄에 원래 **Leaflet** 이 적혀 있었는데 **틀린 문장이었습니다.**
+> `package.json` 에 `leaflet` 이 없고, `src/components/map/GridMap.tsx` 가 헤더 주석에
+> 안 쓴 이유를 셋으로 적어 두고 있습니다 — ① 폐쇄망 납품 가능성 ② 6,797개 셀을 DOM 으로
+> 그리면 성능이 안 나옴 ③ 필요한 도형이 사각형과 원뿐. OSM 타일은 라이브러리 없이
+> 직접 부르고, 타일을 못 받으면 그 사실을 화면에 표시합니다(격자·후보지는 타일 없이도 정확).
+
+**인프라** Docker Compose · GitHub Actions → AWS EC2 · AWS Amplify
