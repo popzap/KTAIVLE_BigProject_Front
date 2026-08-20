@@ -40,23 +40,31 @@ BigProject_Back/datasets/
 └── step1_output/ ~ step4_output/    정본 산출물
 ```
 
-### 🔴 경계 SHP 3개는 따로 넣어야 합니다
+### 🔴 제출본의 행정경계는 **서울 + 경기만** 들어 있습니다
 
-제출 규정(100MB 상한) 때문에 통계청 배포 원본 3개(304.7MB)를 뺐습니다.
+행정경계 3종(`datasets/region_data/BND_*`)은 통계청 원본이 전국이라 셋만 **304.7MB** 입니다.
+제출 규정(100MB 상한)에 맞추려고 **시도코드 `11`(서울)·`31`(경기)로 잘라서** 넣었습니다.
+좌표계(EPSG:5186)와 컬럼은 원본 그대로이고, **잘라낸 것은 행뿐입니다.**
 
-| 빼놓은 파일 | 크기 | 필수 |
-|---|---|---|
-| `datasets/region_data/BND_ADM_DONG_PG.shp` | 129MB | ✅ |
-| `datasets/region_data/BND_SIGUNGU_PG.shp` | 93MB | ✅ |
-| `datasets/region_data/BND_SIDO_PG.shp` | 83MB | 선택 |
+| 파일 | 원본 | 제출본 | 담긴 범위 |
+|---|---|---|---|
+| `BND_ADM_DONG_PG.shp` | 3,559행 129MB | **1,027행 11.8MB** | 서울 426 + 경기 601 |
+| `BND_SIGUNGU_PG.shp` | 252행 93MB | **69행 4.2MB** | 서울 25 + 경기 44 |
+| `BND_SIDO_PG.shp` | 17행 83MB | **2행 1.6MB** | 서울 · 경기 |
 
-같은 이름의 `.cpg`·`.dbf`·`.prj`·`.shx` 는 들어 있습니다. **`.shp` 3개만** 전체본
-`datasets.zip`(약 393MB)에서 꺼내 같은 자리에 놓으세요.
+시연 대상인 **용산구(11030, 16개 동)·성동구(11040, 17개 동)** 는 그대로 들어 있어
+프리셋 두 도메인(흡연·재활용)은 손댈 것 없이 그대로 돌아갑니다.
 
-<https://drive.google.com/file/d/1TAxlK0tCu_a1T4bZffj-yaKXggm0P68A/view?usp=drive_link>
-
-> **없으면**: 서버는 뜨고 화면도 나오는데 STEP2 공간조인이 폴리곤을 못 찾아
-> **지표가 전부 0** 이 됩니다. 안 터지고 값만 틀리므로 5단계 ②·③을 꼭 돌리세요.
+> **서울·경기 밖 지역을 돌리려면** 아래 전체본 `datasets.zip`(약 393MB)에서 전국 원본
+> `BND_*.shp` 3개를 꺼내 같은 자리에 덮어쓰세요. `.dbf`·`.shx`·`.prj`·`.cpg` 도
+> **같이** 바꿔야 합니다 — `.shp` 만 바꾸면 행 수가 어긋나 **속성이 엉뚱한 폴리곤에
+> 붙습니다**(터지지 않고 값만 틀립니다).
+>
+> <https://drive.google.com/file/d/1TAxlK0tCu_a1T4bZffj-yaKXggm0P68A/view?usp=drive_link>
+>
+> **범위 밖에서 돌리면 어떻게 되나**: 서버는 정상 기동하고 화면도 뜹니다. 대신 STEP2
+> 공간조인이 대상 폴리곤을 못 찾아 **지표가 전부 0** 이 됩니다. 안 터지고 값만
+> 틀리므로 5단계 ②·③을 꼭 돌리세요.
 
 ---
 
@@ -152,7 +160,8 @@ docker compose exec api python -c "from app.config import missing_reference_file
 docker compose exec api python app/tools/check_fixture.py 흡연
 ```
 
-②에서 `행정동 경계 SHP`·`시군구 경계 SHP` 가 나오면 **1단계의 `.shp` 3개를 안 넣은 것**입니다.
+②에서 `행정동 경계 SHP`·`시군구 경계 SHP` 가 나오면 **1단계의 데이터 ZIP 을 안 푼 것**입니다
+(`datasets/region_data/` 에 `BND_*.shp` 가 있어야 합니다).
 ③은 LLM 을 안 부르는 순수 대조(비용 0)라, 57/57 이면 파이프라인 전체가 정상입니다.
 
 ---
@@ -187,7 +196,7 @@ LLM 없이 화면 5까지 갑니다(흡연 약 95초).
 | `POSTGRES_PASSWORD 를 .env 에 설정할 것` | compose 가 비밀번호를 못 찾음 | 2단계 |
 | `relation "…" does not exist` | 부트스트랩 안 함 | 3단계 2줄째 |
 | 요청 하나가 **130초** | `.env` 에 `localhost` 를 씀 | `127.0.0.1` 로 |
-| 화면은 뜨는데 **지표가 전부 0** | 경계 `.shp` 3개 없음 | 1단계 |
+| 화면은 뜨는데 **지표가 전부 0** | 경계 `.shp` 3개 없음, 또는 **서울·경기 밖 지역**을 돌림 | 1단계 · 5단계 ② |
 | 화면1 에 **「도메인 목록을 못 받았습니다 · 500」** | 백엔드가 안 떠 있음 | 3단계 → 화면의 **「다시 시도」** |
 | 화면5 가 **HTTP 500** 인데 백엔드는 멀쩡 | 프록시 타임아웃 | 이미 6분으로 늘려 뒀습니다. 그래도 나면 백엔드가 6분을 넘긴 것 |
 | 🔴 화면5 토론이 **내 로컬이 아닌 운영 서버**에서 돎 | `build && start` 로 띄움 | **`npm run dev`** 로. 안 터지고 값만 남의 것이 됩니다 |
