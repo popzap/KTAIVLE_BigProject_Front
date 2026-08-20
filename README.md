@@ -234,6 +234,7 @@ docker compose exec api python app/tools/check_fixture.py 흡연
 | 화면5 가 **HTTP 500** 인데 백엔드는 멀쩡 | 프런트 프록시 타임아웃 (기본 30초) | **이미 6분으로 늘려 두었습니다**(`next.config.ts` 의 `proxyTimeout`). 그래도 나면 백엔드 응답이 6분을 넘긴 것 |
 | 프런트 `npm install` 실패 | Node 버전 | Node 20.9 이상 |
 | dev 서버가 500 `Unexpected token ':'` | dev 를 띄운 채 `build` 를 돌림 | `.next` 삭제 후 dev 재시작 (4단계) |
+| 🔴 화면5 토론이 **내 로컬 백엔드가 아니라 운영 서버**에서 돎 | `npm run build && npm start` 로 띄움 | **`npm run dev` 로 띄우세요.** 화면5 스트림만 `NODE_ENV=production` 일 때 `https://api.omnisite.o-r.kr` 로 직결합니다(`src/lib/omnisite/simulation.ts:238`). 안 터지고 **값만 남의 것**이 됩니다 |
 | 콘솔에 `UnicodeEncodeError` | Windows cp949 콘솔 | `set PYTHONIOENCODING=utf-8` |
 
 > **백엔드 없이 프런트만 먼저 띄워도 됩니다.** 2026-08-20 실측 — 화면은 정상적으로
