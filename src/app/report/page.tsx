@@ -399,11 +399,12 @@ function AuditSection({ doc }: { doc: ReviewedDoc | null }) {
       {fi?.근거 && (
         <p className="mt-3 rounded-lg border border-hairline bg-black/[0.015] px-4 py-3 text-[12px] leading-relaxed text-ink-secondary">
           <b className="text-ink">시설 · 지역 판정 근거</b> {fi.근거}
-          {/* ⚠ 이 꼬리말이 한 번도 안 붙는 게 정상처럼 보일 수 있다 — 백엔드 별건이다.
-              2026-08-24 실측: 데이터가 전부 흡연인데 입력만 EV 여도 `mismatch: false`
-              였다(STEP0.5 프롬프트 쪽, 원인 미규명). 프런트 결함이 아니니 여기를
-              고치려 들지 말 것. 화면1 이 보내는 조합 형식과도 무관하다 — 괄호든
-              문장이든 같았다. 자세한 판단 근거는 `audit/page.tsx` 의 같은 자리 주석. */}
+          {/* 🔴 백엔드 STEP0.5 가 `mismatch` 를 한 번도 `true` 로 안 내서 이 꼬리말은
+              붙은 적이 없다(2026-08-24 실측 4/4 `false`). 배선은 맞고 결함은 프롬프트
+              구조에 있다 → 백엔드가 고치면 **코드 변경 없이 붙는다. 이 주석만 지우면 된다.**
+              화면1 이 보내는 `user_input` 조합과는 무관하다 — 괄호든 문장이든 같았다.
+              판단 근거는 `audit/page.tsx` 의 같은 자리 주석과
+              `백엔드_회신_2026-08-24_mismatch_배지와_커밋분할.md` §1. */}
           {fi.mismatch && (
             <>
               {" "}
