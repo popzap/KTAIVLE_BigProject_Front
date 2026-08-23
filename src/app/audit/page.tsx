@@ -544,6 +544,21 @@ function TargetSection({ fi }: { fi: FacilityInference }) {
 
 
 
+          {/**
+            * ⚠ **이 배지가 한 번도 안 뜨는 게 정상처럼 보일 수 있다 — 백엔드 별건이다.**
+            *    2026-08-24 백엔드 실측: 데이터를 전부 흡연으로 두고 입력만 EV 로 줘도
+            *    `mismatch: false` 였다. STEP0.5 프롬프트 쪽 문제이고 원인 미규명이다.
+            *    **프런트 코드 결함이 아니니 여기를 고치려 들지 말 것.**
+            *
+            * 그럼에도 배지를 **떼지 않는다.** ⓐ 틀린 값을 띄우는 게 아니라 안 띄우는
+            * 것이라 지금 화면은 배지가 없던 시절과 같고, ⓑ 떼면 백엔드가 고친 뒤
+            * 되살리는 걸 잊는다. ⓒ 「이 검사는 신뢰할 수 없음」을 화면에 항상 띄우면
+            * 정상일 때도 흐려진다.
+            *
+            * 오독 위험이 작은 근거: 위 4칸 표의 「분석 주체」가 이미 `confirmed` 로
+            * 「AI 자동 추론됨 / 사람이 직접 확정함」을 말한다. 이 화면의 주된 요청은
+            * 「AI 추론이니 사람이 확인하라」(게이트A)이고 배지는 그 위에 얹는 힌트다.
+            */}
           {fi.mismatch && (
             <div className="mt-2 flex gap-3 p-4 rounded-xl border border-orange-200 bg-orange-50 text-orange-800">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
