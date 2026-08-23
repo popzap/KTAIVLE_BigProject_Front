@@ -10,6 +10,7 @@ import {
   MODE_HITL,
   TOPN_DEFAULT,
   TOPN_MAX,
+  USER_INPUT_MAX,
 } from "@/lib/omnisite/pipeline";
 import { useRun } from "@/lib/omnisite/RunProvider";
 import { SCREENS } from "@/lib/omnisite/screens";
@@ -104,6 +105,39 @@ export default function Screen1Page() {
 
   const topnParsed = parseTopn(topnText);
 
+  /**
+   * 서버로 실제 나가는 `user_input` **한 줄**.
+   *
+   * 🔴 「시설 유형」·「분석 지역」은 **자기 필드가 없다.** `RunRequest` 는
+   *    `domain`·`mode`·`user_input`·`topn`·`auto_approve` 뿐이다(2026-08-24
+   *    운영 스키마 실측). 그래서 두 값을 여기서 의도 문장 뒤에 붙여 STEP0.5
+   *    프롬프트에 얹는다 — 계약을 안 바꾸고 LLM 에 힌트를 더 주는 유일한 경로다.
+   *
+   * 🔴 **빈 칸은 아예 안 붙인다.** `시설 유형: ` 처럼 값 없는 꼬리표를 남기면
+   *    LLM 이 그걸 「미상」이라는 정보로 읽는다 — 안 적은 것과 다른 뜻이 된다.
+   *
+   * 🔴 **괄호+라벨 형식을 문장으로 녹이지 말 것.** 백엔드가 STEP0.5 를 실호출해
+   *    대조한 결과(2026-08-24 회신 §3-2), 사용자가 시도를 안 적고 `분석 지역: 중구`
+   *    만 준 경우 문장 형식(`중구에 … 부지 선정`)에서만 모델이 **`서울특별시 중구`
+   *    로 시도를 지어냈다**(4/4 재현). 라벨이 있으면 「사용자가 여기까지만 적었다」는
+   *    경계가 남는다. 지어낸 시도는 행정코드 검증을 조용히 통과해서 안 터지고
+   *    값만 틀린다 — 「마포구 데이터가 용산구로 통과」 계열이다.
+   */
+  const userInput = (() => {
+    const base = intent.trim();
+    const hints: string[] = [];
+    if (facility.trim()) hints.push(`시설 유형: ${facility.trim()}`);
+    if (region.trim()) hints.push(`분석 지역: ${region.trim()}`);
+    return hints.length > 0 ? `${base} (${hints.join(", ")})` : base;
+  })();
+  /**
+   * 🔴 세는 대상은 **조합 결과**다. 사용자가 친 의도 문장이 아니다 — 꼬리
+   *    `" (시설 유형: …, 분석 지역: …)"` 가 같은 200자를 먹는다(꼬리만 40자쯤
+   *    된다). 의도 문장 길이로 세면 「196자인데 400」이 나온다.
+   *    서버도 `strip()` 후를 세므로 `userInput` 은 이미 trim 된 상태다.
+   */
+  const userInputOver = isFull && userInput.length > USER_INPUT_MAX;
+
   async function handleStep1Confirm() {
     const fromDom = domainRef.current?.value ?? "";
     const value = (dataSource === "preset" ? domain : fromDom || domain).trim();
@@ -155,6 +189,16 @@ export default function Screen1Page() {
       setStep2Error("full 모드는 사용자 의도가 필수입니다. STEP0.5 가 이 문장에서 시설·지역을 확정합니다.");
       return;
     }
+    // 🔴 서버가 400 으로 막는 값이라 여기서 먼저 막는다. 다만 문구는 **조합 후**를
+    //    말한다 — 「의도 문장을 줄이세요」로만 적으면 두 칸을 채운 사람이 원인을
+    //    못 찾는다(실제로 넘긴 건 꼬리를 합친 문장이다).
+    if (userInputOver) {
+      setStep2Error(
+        `전송되는 문장이 ${userInput.length}자입니다. 상한은 ${USER_INPUT_MAX}자예요 — ` +
+          `「시설 유형」·「분석 지역」을 붙인 뒤 길이입니다. 의도 문장이나 두 칸을 줄여주세요.`,
+      );
+      return;
+    }
     if (topnParsed === "invalid") {
       setStep2Error(`입지 선정 개수는 1~${TOPN_MAX} 사이의 정수여야 합니다.`);
       return;
@@ -181,7 +225,9 @@ export default function Screen1Page() {
       effectiveMode,
       isFull
         ? {
-            user_input: intent.trim(),
+            // 🔴 `intent` 가 아니라 **합쳐진 문장**이다. 「시설 유형」·「분석 지역」이
+            //    여기 실려야 STEP0.5 프롬프트에 들어간다(`userInput` 주석).
+            user_input: userInput,
             // 빈 칸이거나 유효하지 않으면 아예 안 보낸다(기본값 20 사용). "invalid"는 이미 Step 2에서 막힌다.
             ...(topnParsed === "empty" || topnParsed === "invalid" ? {} : { topn: topnParsed as number }),
           }
@@ -248,7 +294,7 @@ export default function Screen1Page() {
                   </div>
 
                   <div className="-mx-2 -mb-2">
-                    <UploadPanel ref={uploadRef} domain={domain} facilityType={facility} />
+                    <UploadPanel ref={uploadRef} domain={domain} />
                   </div>
                 </div>
               )}
@@ -308,12 +354,23 @@ export default function Screen1Page() {
                   )}
                 </div>
 
+                {/* 🔴 이 두 칸은 **자기 필드로 안 간다.** `RunRequest` 에 그런 칸이
+                    없다(운영 스키마 실측 2026-08-24: `domain`·`mode`·`user_input`·
+                    `topn`·`auto_approve` 뿐). 그래서 아래 「사용자 의도」 문장 뒤에
+                    붙여 STEP0.5 프롬프트에 얹는다 — 계약을 안 바꾸고 LLM 에 힌트를
+                    더 주는 유일한 경로다. 합쳐진 문장은 아래에 그대로 보여준다. */}
                 <Field
                   label="시설 유형 (선택)"
                   placeholder="예) 흡연부스"
                   value={facility}
                   onChange={setFacility}
+                  note={isFull ? "적으면 「사용자 의도」 문장 뒤에 붙어 함께 전송됩니다." : undefined}
                 />
+                {/* 🔴 시도(광역)까지 적게 유도한다. STEP0.5 는 region 을
+                    `<시도> <시군구>` 로 받고 그 값이 조례 검색과 행정코드 검증에
+                    그대로 쓰인다. 「중구」처럼 시군구만 주면 서울·부산·대구·인천·
+                    대전·울산 중 어디인지 모른다 — 비워두는 편이 낫지, 반쪽으로
+                    적는 게 제일 위험하다(백엔드 회신 §3-3). */}
                 <Field
                   label="분석 지역 (선택)"
                   placeholder="예) 서울특별시 용산구"
@@ -321,7 +378,7 @@ export default function Screen1Page() {
                   onChange={setRegion}
                   note={
                     isFull
-                      ? "⚠ 이 칸은 서버로 안 갑니다. full 모드에서 지역을 정하는 것은 아래 「사용자 의도」 문장입니다 — STEP0.5 가 거기서 읽습니다."
+                      ? "적으면 「사용자 의도」 문장 뒤에 붙어 함께 전송됩니다. 시도까지 적어주세요 — 「중구」처럼 시군구만 적으면 어느 시도인지 알 수 없습니다."
                       : undefined
                   }
                 />
@@ -337,10 +394,47 @@ export default function Screen1Page() {
                     disabled={!isFull}
                     note={
                       isFull
-                        ? "STEP0.5 가 이 문장에서 시설·지역을 확정합니다. 200자까지, '--' 로 시작할 수 없습니다."
+                        ? `STEP0.5 가 이 문장에서 시설·지역을 확정합니다. 위 두 칸을 붙인 뒤 ${USER_INPUT_MAX}자까지, '--' 로 시작할 수 없습니다.`
                         : undefined
                     }
                   />
+                  {/* 🔴 **보내는 문자열을 그대로 보여준다.** 위 두 칸을 뒤에 붙이는 순간
+                      「내가 친 문장」과 「서버가 받는 문장」이 달라진다 — 말하지 않으면
+                      화면이 거짓말한 것이다(원칙 4 · `Field.note` 주석과 같은 이유).
+                      붙일 게 없으면 원문과 같으므로 굳이 두 번 보여주지 않는다.
+                      ⚠ 단 **넘쳤을 때는 붙일 게 없어도 보여준다** — 상한을 넘긴
+                      사람에게 글자 수를 안 보여주면 얼마나 줄여야 하는지 모른다. */}
+                  {isFull && (userInput !== intent.trim() || userInputOver) && (
+                    <div
+                      className={`mt-2 rounded-lg border px-3 py-2 ${
+                        userInputOver ? "border-red-200 bg-red-50" : "border-gray-200 bg-gray-50"
+                      }`}
+                    >
+                      <p
+                        className={`text-xs font-semibold ${
+                          userInputOver ? "text-red-700" : "text-gray-500"
+                        }`}
+                      >
+                        실제로 전송되는 문장{" "}
+                        <span className="font-normal tabular-nums">
+                          ({userInput.length}/{USER_INPUT_MAX}자)
+                        </span>
+                      </p>
+                      <p
+                        className={`mt-1 font-mono text-xs leading-relaxed break-all ${
+                          userInputOver ? "text-red-800" : "text-gray-700"
+                        }`}
+                      >
+                        {userInput}
+                      </p>
+                      {userInputOver && (
+                        <p className="mt-1.5 text-xs font-medium text-red-600">
+                          {userInput.length - USER_INPUT_MAX}자 초과입니다. 이대로 보내면 서버가 400
+                          으로 막습니다.
+                        </p>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 <div className="sm:col-span-2">

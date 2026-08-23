@@ -129,7 +129,12 @@ export const MODE_FULL = "full";
  *    그래서 `createRun` 이 mode 를 보고 넣을지 말지 정한다.
  */
 export interface FullParams {
-  /** 사용자 의도. STEP0.5 가 여기서 시설·지역을 확정한다. 빈 값 → 400. */
+  /**
+   * 사용자 의도. STEP0.5 가 여기서 시설·지역을 확정한다. 빈 값 → 400.
+   *
+   * 🔴 화면1 은 여기에 「시설 유형」·「분석 지역」을 괄호로 **붙여서** 보낸다.
+   *    그 꼬리도 아래 {@link USER_INPUT_MAX} 를 같이 먹는다 — 별도 예산이 아니다.
+   */
   user_input: string;
   /** STEP4 가 뽑을 후보 개수 = 화면4 목록 길이. 서버 기본 20 · 범위 1~200. */
   topn?: number;
@@ -139,6 +144,25 @@ export interface FullParams {
 export const TOPN_DEFAULT = 20;
 /** 계약 8-2 의 상한. 벗어나면 서버가 400. */
 export const TOPN_MAX = 200;
+
+/**
+ * `user_input` 글자 수 상한.
+ *
+ * 🔴 **OpenAPI 에는 안 나온다.** `RunRequest.user_input` 은 `str | None` 이라
+ *    `maxLength` 가 없고, 검사는 러너(`pipeline_runner.py` `_validate_full_params`)에
+ *    있다. 스키마만 보고 「제한 없음」으로 읽으면 틀린다 — 실제로 한 번 그렇게
+ *    읽고 화면에서 이 문구를 지웠다가 되살렸다(2026-08-24).
+ *
+ * 🔴 **바이트가 아니라 글자 수다.** 파이썬 `len()` 이 코드포인트를 세므로 한글도
+ *    1자다. UTF-8 3배를 걱정해 160자쯤에서 막으면 멀쩡한 입력을 막는 것이다.
+ *    세는 시점은 **`strip()` 후**다.
+ *
+ * 운영 실측(2026-08-24, `EV 충전소` 도메인에 201자):
+ *   `400 {"detail":"user_input 이 너무 깁니다(201자, 상한 200)."}`
+ * 이 400 은 run 생성 **전**이라 run_id·폴더·`run_records` 가 안 생긴다.
+ * 그래서 부수효과 없이 찔러 볼 수 있었다.
+ */
+export const USER_INPUT_MAX = 200;
 
 /**
  * `GET /pipeline/runs` 응답 (계약 §3-3).
