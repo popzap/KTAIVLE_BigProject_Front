@@ -251,8 +251,16 @@ export interface RegulationUploadResult {
   ok: boolean;
   domain: string;
   saved_to: string;
-  facility_type: string;
-  /** `request`(요청이 준 값) 또는 `audit_reviewed`(STEP1 확정본에서 읽음). */
+  /**
+   * 🔴 **`null` 일 수 있다.** 요청이 안 보내고 STEP1 감리 확정본도 없으면 서버가
+   *    못 정한다 — 그래도 업로드·적재·검색은 전부 정상이다(예전엔 이 경우가 400
+   *    이었다). 화면에서 `null` 을 그대로 찍지 말 것.
+   */
+  facility_type: string | null;
+  /**
+   * `request`(요청이 준 값) · `audit_reviewed`(STEP1 확정본에서 읽음) ·
+   * `unknown`(못 정함 — **정상 상태다**).
+   */
   facility_type_source: string;
   law_files_total: number;
   files: RegulationReport[];
@@ -266,29 +274,29 @@ export function fetchRegulations(domain: string): Promise<RegulationItem[]> {
 /**
  * 조례 다중 업로드.
  *
- * 🔴 `facility_type` 을 **프런트가 지어내지 않는다.** 생략하면 서버가 STEP1
- *    확정본(`<도메인>_audit_result_reviewed.json`)에서 읽고, 그것도 없으면
- *    **400** 이다(`upload.py:208-215`). 이 값은 토론 단계 조례 검색 필터와
- *    정확히 일치해야 해서, 틀리면 안 터지고 **다른 시설 조례가 인용된다**.
- *    그래서 응답의 `facility_type_source` 를 화면에 남긴다.
+ * 🔴 `facility_type` 을 **보내지 않는다.** 예전엔 필수였고 비면 **400** 이었다 —
+ *    조례 벡터 콜렉션이 `statutes_collection` **하나**라 전 도메인 조문이 한 칸에
+ *    섞였고, 그래서 검색이 이 태그 **정확일치**로 걸러야 했다. 즉 태그가 곧 격리
+ *    키였다(2026-08-09 실측: 태그가 어긋나 흡연부스 토론 상위 15건 중 4건이
+ *    전기차충전소 조례였다). 백엔드가 콜렉션을 **도메인마다** 갈랐으므로
+ *    (`statutes_<도메인>`) 격리는 이제 구조가 맡고, 이 값은 사람이 보는
+ *    부가정보로 내려갔다. 운영 스키마 실측(2026-08-24, `GET /openapi.json`):
+ *    `required: ["domain", "files"]` · `facility_type: anyOf[string, null]`.
  *
- * `ingest=false` 는 저장만 하고 벡터 DB 를 건너뛴다. 기본은 `true` 이고
- * 그때 적재 0건이면 서버가 **422** 로 거절한다(`upload.py:480-489`) —
- * "올렸는데 검색에 안 잡힘" 을 성공으로 보이지 않게 하려는 것이다.
+ * 🔴 `ingest` 도 **보내지 않는다.** 기본이 `true` 인데 끄면 파일만 저장되고 토론이
+ *    근거를 못 찾는다 — 사람이 고를 이유가 없는 값이라 칸째로 없앴다. 기본값에서
+ *    적재 0건이면 서버가 **422** 로 거절한다 — "올렸는데 검색에 안 잡힘" 을
+ *    성공으로 보이지 않게 하려는 것이라, 이 갈래는 그대로 살아 있다.
  */
 export function uploadRegulations(opts: {
   domain: string;
   files: File[];
-  facilityType?: string;
   createDomain?: boolean;
-  ingest?: boolean;
 }): Promise<RegulationUploadResult> {
   const form = new FormData();
   form.set("domain", opts.domain);
   for (const f of opts.files) form.append("files", f);
-  if (opts.facilityType) form.set("facility_type", opts.facilityType);
   if (opts.createDomain !== undefined) form.set("create_domain", String(opts.createDomain));
-  if (opts.ingest !== undefined) form.set("ingest", String(opts.ingest));
   // 🔴 경로는 **단수** `/regulation` 이다. 복수 `/regulations` 는 GET(목록)·
   //    DELETE 전용이라 POST 로 치면 **405** 다(실측). 백엔드 전달문의
   //    「`/upload/regulations` 를 직결로」는 이 지점이 틀렸다.

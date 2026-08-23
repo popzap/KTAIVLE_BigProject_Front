@@ -178,39 +178,14 @@ export interface UploadPanelHandle {
 
 export function UploadPanel({
   domain,
-  facilityType,
   ref,
 }: {
   /** 화면 1 의 "분석 도메인" 입력값. 비어 있으면 아무 호출도 하지 않는다. */
   domain: string;
-  /**
-   * 화면 1 의 "시설 유형" 입력값 → 조례 업로드의 `facility_type`.
-   *
-   * 🔴 비워두면 서버가 STEP1 감리 확정본에서 읽고, 그것도 없으면 **400** 이다.
-   *    프런트가 기본값을 채우면 안 된다 — 이 값이 틀리면 안 터지고
-   *    **다른 시설의 조례가 토론에 인용된다**(2026-08-09 실측: 흡연부스 토론
-   *    상위 15건 중 4건이 전기차충전소 조례였다).
-   */
-  facilityType: string;
   /** React 19 는 `ref` 를 그냥 prop 으로 받는다(`forwardRef` 불필요). */
   ref?: Ref<UploadPanelHandle>;
 }) {
   const [tab, setTab] = useState<Tab>("data");
-  const [ingest, setIngest] = useState(true);
-  /**
-   * 조례 업로드용 시설 유형 — **이 패널이 직접 묻는다.**
-   *
-   * 🔴 부모(`facilityType` prop)의 「시설 유형」 칸은 화면1 **Step 2** 에 있는데 이
-   *    패널은 **Step 1** 에 있다. 그래서 조례를 올리는 시점에는 그 값이 **항상 빈
-   *    문자열**이고, 새 도메인은 STEP1 감리도 없어 서버가 되짚을 데가 없다 →
-   *    `POST /upload/regulations` 가 **무조건 400** 이었다(2026-08-13, '그늘막' 실측).
-   *    필요한 값을 **필요한 자리에서** 받는다.
-   *
-   * 🔴 기본값을 넣지 않는다. 도메인 이름이 곧 시설명이라고 가정하면('그늘막' →
-   *    "그늘막") 대개 맞아서 **틀렸을 때 안 걸린다** — 이 값은 토론 단계의 조례
-   *    검색 필터와 정확히 일치해야 하고, 어긋나면 다른 시설의 조례가 인용된다.
-   */
-  const [facilityInput, setFacilityInput] = useState("");
 
   /**
    * 이번 세션이 **실제로 쓴** 폴더. `base` 는 사람이 친 이름, `actual` 은 `_2` 가
@@ -234,18 +209,6 @@ export function UploadPanel({
   const trimmed = domain.trim();
   /** 이미 올린 폴더. 사람이 이름을 고쳐 쓰면 `null` 로 돌아간다. */
   const savedDomain = saved && saved.base === trimmed ? saved.actual : null;
-
-  /** 이 패널이 받은 값이 먼저다. 부모 칸(Step 2)은 이미 채워져 있을 때만 거든다. */
-  const effectiveFacility = facilityInput.trim() || facilityType.trim();
-  /**
-   * 조례 업로드에 시설 유형이 비면 서버가 **무조건 400** 이다. 왕복하기 전에 막고
-   * **이유를 적는다** — 그냥 비활성화만 하면 왜 못 누르는지 안 보인다.
-   *
-   * 🔴 예전엔 `entry?.has_audit_reviewed` 가 참이면 생략을 허용했다. **이제 그 갈래는
-   *    없다** — 겹치면 `_2` 로 새 폴더를 만드는 구조라 STEP1 감리가 있는 폴더에
-   *    덧올리는 일 자체가 안 생긴다. 서버가 되짚을 데가 항상 없으므로 **항상 필수**다.
-   */
-  const facilityMissing = tab === "law" && !effectiveFacility;
 
   // ── 올린 폴더의 파일 목록 ────────────────────────────────────
   /**
@@ -352,16 +315,6 @@ export function UploadPanel({
   async function onUpload(stay: boolean): Promise<string | null> {
     if (!trimmed) return null;
     if (picked.length === 0) return savedDomain ?? trimmed;
-    // 🔴 조례 탭에서 시설 유형이 비면 서버가 **무조건 400** 이다. 왕복하지 않고
-    //    여기서 막는다 — 화면에는 이미 그 이유가 적혀 있다(아래 안내 상자).
-    if (facilityMissing) {
-      setNotice({
-        kind: "error",
-        title: "시설 유형을 먼저 입력하세요",
-        lines: ["조례 업로드는 `facility_type` 이 필요합니다. 비워 두면 서버가 400 으로 거절합니다."],
-      });
-      return null;
-    }
     setBusy(true);
     setNotice(null);
     let target = savedDomain;
@@ -412,15 +365,17 @@ export function UploadPanel({
         const r: RegulationUploadResult = await uploadRegulations({
           domain: target,
           files: picked,
-          facilityType: effectiveFacility || undefined,
           createDomain: true, // 위 데이터 업로드와 같은 이유(멱등).
-          ingest,
         });
-        const lines = [
-          `저장 위치: ${r.saved_to}`,
-          `시설 종류 태깅: ${r.facility_type} (출처 ${r.facility_type_source})`,
-          `조례 파일 총 ${r.law_files_total}개`,
-        ];
+        const lines = [`저장 위치: ${r.saved_to}`];
+        // 🔴 못 정한 경우(`facility_type: null` · 출처 `unknown`)는 **정상**이라
+        //    아무 말도 하지 않는다. 예전 문구를 그대로 두면 「시설 종류 태깅: null
+        //    (출처 unknown)」 이 찍혀서 정상 업로드가 고장으로 읽힌다. 격리는 이제
+        //    도메인별 콜렉션이 맡으므로 이 값이 없어도 잃는 게 없다.
+        if (r.facility_type) {
+          lines.push(`시설 종류 태깅: ${r.facility_type} (출처 ${r.facility_type_source})`);
+        }
+        lines.push(`조례 파일 총 ${r.law_files_total}개`);
         for (const f of r.files) {
           lines.push(
             `${f.filename} · ${kb(f.size)} · 조문 ${f.articles}개(규제 ${f.regulatory_articles}) · ` +
@@ -619,50 +574,18 @@ export function UploadPanel({
               합계 {kb(picked.reduce((s, f) => s + f.size, 0))}
             </p>
           )}
-          {tab === "law" && (
-            <>
-              {/* 🔴 조례는 **시설 종류로 태깅**되어 저장되고, 토론 단계의 조례 검색이 그
-                  태그로 거른다. 서버는 이 값을 추측하지 않는다(추측하면 다른 시설의
-                  조례가 인용되는데 예외가 안 난다) — 그래서 여기서 받는다. */}
-              <label className="mt-3 block text-sm text-gray-700">
-                {/* 「(선택)」 갈래는 없앴다 — 되짚을 STEP1 감리가 있는 폴더에 덧올리는
-                    일이 구조상 안 생기므로 이 값은 **항상 필수**다. */}
-                <span className="font-medium">
-                  시설 유형<span className="ml-1 text-red-600">*</span>
-                </span>
-                <input
-                  type="text"
-                  value={facilityInput}
-                  onChange={(e) => setFacilityInput(e.target.value)}
-                  placeholder={facilityType.trim() || "예) 흡연부스 · 재활용정거장 · 그늘막"}
-                  className={`mt-1 w-full rounded-lg border px-3 py-2 text-sm ${
-                    facilityMissing ? "border-red-300 bg-red-50" : "border-gray-300"
-                  }`}
-                />
-                <span className="mt-1 block text-xs text-gray-500">
-                  조례는 항상 새 폴더에 저장되므로 서버가 되짚을 STEP1 감리가 없습니다 —
-                  직접 적어주세요. 토론 단계의 조례 검색 필터와{" "}
-                  <strong>정확히 같은 낱말</strong>이어야 합니다.
-                </span>
-              </label>
-              <label className="mt-3 flex items-center gap-2 text-sm text-gray-700">
-                <input
-                  type="checkbox"
-                  checked={ingest}
-                  onChange={(e) => setIngest(e.target.checked)}
-                />
-                벡터 DB(<code className="font-mono text-xs">statutes_collection</code>)에 적재
-                <span className="text-gray-400">— 끄면 파일만 저장되고 토론이 못 찾습니다</span>
-              </label>
-            </>
-          )}
+          {/* 🔴 조례 탭에도 **추가로 물을 것이 없다.** 예전엔 「시설 유형」(필수)과
+              「벡터 DB 적재」 체크박스가 여기 있었다. 전자는 조례가 한 콜렉션에
+              섞여 있던 시절의 격리 키였고 백엔드가 도메인별 콜렉션으로 가르면서
+              부가정보로 내려갔다. 후자는 끄면 토론이 근거를 못 찾을 뿐이라 고를
+              이유가 없었다 — 둘 다 안 보내면 서버가 알아서 한다(`upload.ts`). */}
           <div className="mt-4 flex gap-2">
             <button
               type="button"
               // 🔴 `stay: true` — 이 버튼은 패널에 머문다. 「다음 단계」와 다른 점이
               //    여기뿐이다(`onUpload` 주석).
               onClick={() => void onUpload(true)}
-              disabled={busy || facilityMissing}
+              disabled={busy}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 disabled:opacity-60"
             >
               {busy ? (
@@ -686,13 +609,6 @@ export function UploadPanel({
               선택 해제
             </button>
           </div>
-          {/* 막힌 이유를 적는다 — 비활성 버튼만 두면 「고장」으로 읽힌다. */}
-          {facilityMissing && (
-            <p className="mt-2 text-xs text-red-700">
-              시설 유형을 적어야 올릴 수 있습니다. 지금 보내면 서버가 400 으로 거절합니다 —
-              태그 없이 저장하면 다른 시설의 조례가 토론에 인용됩니다.
-            </p>
-          )}
         </div>
       )}
 
