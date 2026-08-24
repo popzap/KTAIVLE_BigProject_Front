@@ -996,15 +996,20 @@ function ServerHearingACard({ s }: { s: ServerHearingA }) {
         </div>
       )}
 
-      {s.detail.scenario && (
-        <div className="mt-3">
-          <h4 className="text-[12px] font-semibold">조정 시나리오(엔진 원문)</h4>
-          {/* 🔴 키를 골라 표로 만들지 않는다 — 리포터 노드가 필드를 늘리면 옛 값만 보인다. */}
-          <pre className="mt-1.5 overflow-x-auto whitespace-pre-wrap rounded-lg border border-hairline bg-black/[0.02] p-3 font-mono text-[11px] leading-relaxed text-ink-secondary">
-            {JSON.stringify(s.detail.scenario, null, 2)}
-          </pre>
-        </div>
-      )}
+      {/**
+        * 🔴 **「조정 시나리오(엔진 원문)」 블록을 지웠다**(2026-08-24 사용자 지적:
+        *    「사용자가 봐도 이해하기 어려우니까」). `s.detail.scenario` 를
+        *    `JSON.stringify` 로 통째 찍던 자리다 — 중괄호·`final_acceptance_score`
+        *    같은 키가 그대로 보였다. 보고서는 **읽는 문서**지 응답 덤프가 아니다.
+        *
+        * ⚠ **값이 사라진 게 아니다.** 아래 `Transcript` 의 「전문 JSON 내려받기」가
+        *   `s.detail` 을 통째로 저장하고 `scenario` 는 그 안에 그대로 있다. 그래서
+        *   원문이 필요한 사람은 여전히 꺼낼 수 있다(원칙 4 — 감추되 없애지 않는다).
+        *
+        * ⚠ 되살릴 거면 **키를 골라 표로 만들지 말 것.** 리포터 노드가 필드를 늘리면
+        *   화면만 조용히 옛 값을 보인다 — 원래 원문을 그대로 실었던 이유가 그거다.
+        *   읽히게 하려면 `summary`·`reason` 만 문장으로 뽑고 나머지는 내려받기로.
+        */}
 
       <Transcript
         lines={lines}
@@ -1161,11 +1166,10 @@ function HearingA({ a }: { a: HearingResultA }) {
 
 function HearingB({ b }: { b: HearingResultB }) {
   /**
-   * 🔴 키 이름이 바뀌었다(2026-08-11 백엔드 SSE 정규화) —
-   *    `round_count` → `round` · `reporter` → `report`.
+   * 🔴 키 이름이 바뀌었다(2026-08-11 백엔드 SSE 정규화) — `round_count` → `round`.
    *    **옛 이름도 같이 본다.** 이 값은 sessionStorage 에 이미 저장돼 있을 수
    *    있고(`omnisite.hearingB.v1`), 새 이름만 보면 계약 바뀌기 전에 돈 토론이
-   *    보고서에서 라운드 `—` · 시나리오 없음으로 조용히 비어 버린다.
+   *    보고서에서 라운드 `—` 로 조용히 비어 버린다.
    *    옛 기록이 다 사라지면 뒤쪽 폴백을 지운다.
    */
   const rounds =
@@ -1174,7 +1178,6 @@ function HearingB({ b }: { b: HearingResultB }) {
       : typeof b.status?.round_count === "number"
         ? b.status.round_count
         : null;
-  const reporter = b.status?.report ?? b.status?.reporter;
   return (
     <div className="rounded-xl border border-hairline p-5">
       <div className="flex flex-wrap items-center gap-2">
@@ -1229,19 +1232,16 @@ function HearingB({ b }: { b: HearingResultB }) {
         </div>
       )}
 
-      {reporter !== undefined && (
-        <div className="mt-3">
-          <h4 className="text-[12px] font-semibold">최종 시나리오(엔진 원문)</h4>
-          {/*
-            🔴 모양을 우리가 정하지 않는다. `final_scenarios` 의 필드는 백엔드
-               리포터 노드가 정하고 그쪽이 바뀔 수 있다 — 키를 골라 표로 만들면
-               필드가 늘었을 때 화면만 조용히 옛 값을 보인다. 원문을 그대로 싣는다.
-          */}
-          <pre className="mt-1.5 overflow-x-auto whitespace-pre-wrap rounded-lg border border-hairline bg-black/[0.02] p-3 font-mono text-[11px] leading-relaxed text-ink-secondary">
-            {JSON.stringify(reporter, null, 2)}
-          </pre>
-        </div>
-      )}
+      {/**
+        * 🔴 **「최종 시나리오(엔진 원문)」 블록도 같이 지웠다.** 사용자가 지목한 것은
+        *    A 카드의 「조정 시나리오」였지만, 이건 **같은 화면 한 칸 아래에 있는 쌍둥이**다
+        *    — 같은 `JSON.stringify` 덤프고 이름만 다르다. 하나만 지우면 사용자는
+        *    같은 지적을 다시 하게 된다.
+        *
+        * ⚠ 여기도 값은 안 사라진다 — 아래 「전문 JSON 내려받기」가 `b` 를 통째로
+        *   저장하고 `reporter` 는 `b.status.report`(옛 기록은 `b.status.reporter`)라
+        *   그 파일 안에 들어 있다.
+        */}
 
       <Transcript
         lines={b.lines}
