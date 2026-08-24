@@ -617,7 +617,17 @@ function IntentCard({
         <div className="mt-2 flex flex-col gap-4">
           <div className="flex flex-col gap-2 bg-blue-50/50 p-3 rounded-lg border border-blue-100">
             <p className="text-[14px] text-blue-900 font-bold">&quot;{q.summary}&quot;</p>
-            <p className="text-[13px] text-gray-500 mt-1">{q.message}</p>
+            {/*
+              🔴 `whitespace-pre-wrap` 이다. 2026-08-24 백엔드 배포로 이 `message` 가
+                 **여러 줄**이 됐다 — `stat_join` 판정이 못 찾은 조인 키를 사유·컬럼
+                 목록·후보 매칭률로 나눠 적는다. 기본 `normal` 이면 그 줄바꿈이
+                 뭉개져 「…멈춥니다.컬럼: [...]후보 매칭률: 후보 없음」 한 덩어리가
+                 되고, 사람이 판단해야 할 세 가지가 문장 하나로 붙는다.
+                 근거: `백엔드_회신_2026-08-24d_…크로스워크는_무죄….md` §3·§4.
+              ⚠ 높이를 고정하거나 `line-clamp` 를 걸지 말 것. 잘린 경고는 안 잘린
+                척 읽힌다.
+            */}
+            <p className="text-[13px] text-gray-500 mt-1 whitespace-pre-wrap">{q.message}</p>
           </div>
 
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] px-1">
