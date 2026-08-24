@@ -24,11 +24,11 @@ import { PageFooter, PageHeader, SourceNote } from "@/components/ui/Page";
 import { useArtifact } from "@/lib/omnisite/useArtifact";
 import { useRun } from "@/lib/omnisite/RunProvider";
 import { writeSitePick } from "@/lib/omnisite/sitePick";
-import { loadExclusion, loadReport, loadScoreGrid, loadTopN } from "@/lib/omnisite/pipeline";
+import { loadExclusion, loadReport, loadScoreGrid, loadTopN, loadWeightSet } from "@/lib/omnisite/pipeline";
 import { areaM2, fixed, int, percent } from "@/lib/omnisite/format";
 import { jimokLabel } from "@/lib/omnisite/jimok";
 import { SCREENS } from "@/lib/omnisite/screens";
-import type { ExclusionDoc, ReportDoc, ScoreGridDoc, TopNCsvRow } from "@/lib/omnisite/types";
+import type { ExclusionDoc, ReportDoc, ScoreGridDoc, TopNCsvRow, WeightSetDoc } from "@/lib/omnisite/types";
 
 const SCREEN = SCREENS.find((s) => s.no === "4")!;
 
@@ -50,6 +50,17 @@ export default function Screen4Page() {
   const grid = useArtifact<ScoreGridDoc>("score_grid", loadScoreGrid);
   const topn = useArtifact<TopNCsvRow[]>("topN", loadTopN);
   const report = useArtifact<ReportDoc>("report", loadReport);
+  /**
+   * 지역 이름(「용산구」) **하나 때문에** 받는다. 커버율을 「용산구 수요의 3.94%」로
+   * 적으려면 분모가 무엇인지 알아야 하는데, `report.json` 에는 `domain`·`facility`
+   * 뿐이고 `region` 이 없다(실측).
+   *
+   * 🔴 `run.domain` 으로 대신하면 안 된다 — 그건 저장 폴더 이름(`EV 충전소_2`)이라
+   *    시설이지 지역이 아니다.
+   * ⚠ 이 산출물이 없는 run 이면 `unavailable` 이고 `data` 가 `null` 이다. 그때는
+   *    화면이 「전체 수요」로 떨어진다 — 실패해도 이 화면은 안 깨진다.
+   */
+  const weightSet = useArtifact<WeightSetDoc>("weight_set", loadWeightSet);
   /**
    * 배제 구역의 **실제 형상**. 없으면 `null` 이고 지도는 격자 사각형으로 떨어진다 —
    * 그 사실을 **안내 패널**이 말한다(아래 `showInfo` 블록). 조용히 바뀌지 않는다.
@@ -171,12 +182,12 @@ export default function Screen4Page() {
                       
                       {/* Floating Detail Popup */}
                       {sel && (
-                        <div className="absolute top-4 left-4 z-10 w-96 max-h-[calc(100%-2rem)] overflow-y-auto rounded-xl bg-white/95 backdrop-blur shadow-2xl border border-gray-200 p-4">
+                        <div className="absolute top-4 left-4 z-10 w-[27rem] max-h-[calc(100%-2rem)] overflow-y-auto rounded-xl bg-white/95 backdrop-blur shadow-2xl border border-gray-200 p-4">
                           <Detail
                             row={sel}
                             prev={rows.find((r) => r.순위 === sel.순위 - 1) ?? null}
                             rows={rows}
-                            minSep={minSepM(report.data)}
+                            region={weightSet.data?.region ?? null}
                             onClose={() => select(null)}
                           />
                         </div>
@@ -417,20 +428,6 @@ function TopList({
 }
 
 /**
- * 「최소 이격」 기준값. **산출물의 키 이름이 한글이라 그대로 읽는다** —
- * 실측 `report.facility_params` 는 `설치_소요_폭_m` · `서비스_반경_m` ·
- * `최소_이격_m` 세 개다(`r_20260805_001`).
- *
- * 🔴 키가 없으면 `null` 을 돌려주고 화면은 "—" 를 그린다. 200 을 기본값으로
- *    박으면 그건 도메인 상수 하드코딩이고, 다른 시설(재활용정거장)에서 조용히
- *    틀린 숫자를 보여주게 된다.
- */
-function minSepM(report: ReportDoc | null): number | null {
-  const v = report?.facility_params?.["최소_이격_m"];
-  return typeof v === "number" ? v : null;
-}
-
-/**
  * 선택한 후보에서 **가장 가까운 다른 후보**까지의 거리(m).
  *
  * 🔴 산출물에는 이 값이 없다. 행 단위 「최소 이격」 열이 topN_min.csv 에 없어서
@@ -477,7 +474,7 @@ function Detail({
   row,
   prev,
   rows,
-  minSep,
+  region,
   onClose,
 }: {
   row: TopNCsvRow;
@@ -485,18 +482,33 @@ function Detail({
   prev: TopNCsvRow | null;
   /** 이격 계산에 필요하다 — 거리는 한 행만 봐서는 나오지 않는다. */
   rows: TopNCsvRow[];
-  /** 시설 기준 이격(m). 산출물에 없으면 null. */
-  minSep: number | null;
+  /**
+   * 분석 지역 이름("용산구"). 커버율이 **무엇에 대한 비율인지** 적기 위한 것이다.
+   *
+   * 🔴 산출물에서 못 읽으면 `null` 이고, 그때는 「전체 수요」라고만 적는다.
+   *    "용산구" 를 기본값으로 박으면 다른 지역 run 에서 조용히 거짓말을 한다.
+   */
+  region: string | null;
   onClose: () => void;
 }) {
   const deltaCover = row.누적커버율 - (prev?.누적커버율 ?? 0);
   const near = nearestOther(row, rows);
+  /**
+   * 「용산구 수요」 · 지역을 모르면 「전체 수요」.
+   *
+   * ⚠ 산출물의 `region` 은 **"서울특별시 용산구"** 로 온다(실측 `r_20260824_002`).
+   *   그대로 쓰면 한 줄이 표를 넘겨서 마지막 마디만 쓴다. **줄인 이름은 여기서만**이고,
+   *   원문은 툴팁에 그대로 싣는다 — 「중구」처럼 여러 시에 있는 이름일 때 어느 중구인지
+   *   화면에서 사라지면 안 된다(원칙 4).
+   */
+  const short = region ? (region.split(/\s+/).pop() ?? region) : null;
+  const demandOf = short ? `${short} 수요` : "전체 수요";
   return (
     <div>
       <div className="flex items-start justify-between gap-2">
         <div>
-          <div className="text-[12px] text-ink-secondary">{row.순위}순위 후보지</div>
-          <h2 className="text-[15px] font-semibold">{row.JIBUN}</h2>
+          <div className="text-[13px] text-ink-secondary">{row.순위}순위 후보지</div>
+          <h2 className="text-[17px] font-semibold">{row.JIBUN}</h2>
         </div>
         {/* 「목록으로」가 아니라 「선택 해제」다. 목록은 탭으로 늘 있으므로 이 버튼이
             하는 일은 **고른 것을 지우는 것**(지도 강조도 같이 풀린다)이다. */}
@@ -505,30 +517,69 @@ function Detail({
         </button>
       </div>
 
-      <dl className="mt-3 flex flex-col gap-1 text-[12px]">
-        <Row k="수요 해결 기여 점수" v={`${fixed(row.커버기여, 1)}`} bold />
-        <Row k="입지 평가 점수" v={`${fixed(row.점수 * 100, 1)}`} />
+      {/**
+        * 🔴 **네 줄을 지웠다**(2026-08-24 사용자 지적: 「정보가 너무 많아」).
+        *    부지 면적 · 시설 간 최소 설치 간격 · 국유재산 지번 일치 · 후보 위치
+        *    생성 방식. 넷 다 **파이프라인이 이미 판정에 쓰고 거른** 값이라, 여기서
+        *    다시 보여줘도 사람이 그걸로 뒤집을 게 없다. 남긴 것은 「어디를 고를까」에
+        *    실제로 쓰이는 것들뿐이다.
+        *    ⚠ 되살릴 거면 접이식으로. 이 팝업은 지도 위에 떠 있어서 길어질수록
+        *      정작 봐야 할 지도를 가린다.
+        */}
+      <dl className="mt-3 flex flex-col gap-1.5 text-[13px]">
         <Row
-          k="추가 수요 커버"
-          v={`+${fixed(deltaCover * 100, 2)}%p`}
+          k="수요 해결 기여 점수"
+          v={`${fixed(row.커버기여, 1)}`}
+          bold
+          hint={
+            "이 곳을 설치했을 때 「새로」 감당하게 되는 수요의 양입니다.\n" +
+            "앞순위가 이미 커버한 수요는 빼고 셉니다 — 그래서 순위가 내려갈수록 작아집니다.\n" +
+            "최종 순위는 「입지 평가 점수」가 아니라 이 값으로 정합니다.\n" +
+            "출처: report.json 의 coverage.marginal (비율이 아니라 절대량이라 % 가 아닙니다)"
+          }
         />
-        <Row k="누적 수요 커버율" v={percent(row.누적커버율, 2)} />
+        <Row
+          k="입지 평가 점수"
+          v={`${fixed(row.점수 * 100, 1)}`}
+          hint={
+            "화면 3 에서 확정한 지표별 가중치로 이 지점 「하나만」 채점한 값입니다 (0~100).\n" +
+            "이미 뽑힌 후보와 수요가 겹치는지는 안 봅니다 — 그래서 이 점수가 높아도 최종 순위는 낮을 수 있고, 반대도 됩니다.\n" +
+            "출처: topN.csv 의 점수 × 100"
+          }
+        />
+        {/**
+          * 🔴 예전 이름은 「추가 수요 커버 +3.94%p」였다. **무엇의 3.94% 인지 화면에
+          *    없었다** — 사람은 「이 자리 하나가 3.94% 를 커버한다」로 읽는데, 실제로는
+          *    앞순위가 덮은 수요를 뺀 **순증분**이라 단독 설치하면 이보다 크다.
+          *    분모(지역)와 「새로」를 문장에 넣어 그 오해를 막는다(원칙 4).
+          */}
+        <Row
+          k="이 곳이 새로 커버하는 수요"
+          v={`${demandOf}의 ${fixed(deltaCover * 100, 2)}%`}
+          hint={
+            `이 곳을 추가로 설치하면 ${demandOf} 중 ${fixed(deltaCover * 100, 2)}% 를 새로 감당하게 됩니다.\n` +
+            (row.순위 === 1
+              ? "1순위라 앞에 뺄 것이 없습니다 — 이 곳 단독 커버율과 같습니다.\n"
+              : `1~${row.순위 - 1}순위가 이미 커버한 수요는 빼고 센 값입니다. 이 곳만 단독으로 설치하면 이보다 큽니다.\n`) +
+            (region ? `분석 지역 전체 이름: ${region}` : "분석 지역 이름을 산출물에서 못 읽어 「전체 수요」로 적었습니다.")
+          }
+        />
+        {/* 1순위면 누적 = 순증이라 같은 숫자가 두 번 나온다(그리고 「1~1순위」라고 적힌다). 안 그린다. */}
+        {row.순위 > 1 && (
+          <Row
+            k={`1~${row.순위}순위 누적`}
+            v={`${demandOf}의 ${percent(row.누적커버율, 2)}`}
+          />
+        )}
         {/* 지목 부호 → 정식 명칭. 예전엔 여기서 「대」만 손으로 풀었는데, 부호는
             28 종이라 나머지는 한 글자 그대로 나왔다. 표는 `jimokLabel` 로 통일한다. */}
         <Row k="토지 유형" v={jimokLabel(row.지목)} />
-        <Row k="부지 면적" v={`${int(row.면적)}㎡`} />
         <Row k="실제 설치 가능 폭" v={`${fixed(row.내접폭, 1)}m`} />
-        <Row
-          k="시설 간 최소 설치 간격"
-          v={minSep === null ? "—" : `${fixed(minSep, 0)}m`}
-        />
         <Row
           k="가장 가까운 다른 추천 후보"
           v={near === null ? "주변에 후보지 없음" : `${fixed(near.m, 0)}m · 추천 ${near.rank}순위`}
         />
         <Row k="국가 소유 지분" v={row.국유_지분율 === 0 ? "없음" : percent(row.국유_지분율, 1)} />
-        <Row k="국유재산 지번 일치" v={row.국유_지번일치 ? "일치" : "일치하지 않음"} />
-        <Row k="후보 위치 생성 방식" v={row.from_rep ? "필지 대표점" : "격자 기반"} />
         <Row k="필지 고유번호(PNU)" v={row.PNU} mono />
         <Row k="위치 좌표" v={`${row.위도.toFixed(6)}, ${row.경도.toFixed(6)}`} mono />
       </dl>
@@ -537,11 +588,41 @@ function Detail({
   );
 }
 
-function Row({ k, v, mono, bold }: { k: string; v: string; mono?: boolean; bold?: boolean }) {
+/**
+ * @param hint 마우스를 올리면 뜨는 **산정 방식** 설명. 여러 줄이면 `\n` 으로 나눈다.
+ *
+ * 🔴 설명이 있는 줄에는 **점선 밑줄과 `cursor-help` 를 같이 준다.** 아무 표시 없이
+ *    `title` 만 달면 거기에 설명이 있다는 걸 아무도 모른다 — 안 단 것과 같다.
+ *
+ * ⚠ 브라우저 기본 툴팁이다. 직접 만든 말풍선이 아닌 이유: 이 팝업은 지도 위에
+ *   `overflow-y-auto` 통 안에 떠 있어서, 안에서 절대배치한 말풍선은 통에 잘린다.
+ *   기본 툴팁은 브라우저가 창 기준으로 띄워 안 잘린다. 대신 뜨는 데 1초쯤 걸리고
+ *   모바일에선 안 뜬다 — 그래서 **점수 값 자체는 툴팁 없이도 읽히게** 두었다.
+ */
+function Row({
+  k,
+  v,
+  mono,
+  bold,
+  hint,
+}: {
+  k: string;
+  v: string;
+  mono?: boolean;
+  bold?: boolean;
+  hint?: string;
+}) {
   return (
-    <div className={`flex justify-between gap-3 ${bold ? "mb-1.5" : ""}`}>
-      <dt className={`shrink-0 ${bold ? "font-bold text-gray-900 text-[13px]" : "text-ink-secondary"}`}>{k}</dt>
-      <dd className={`text-right ${bold ? "font-bold text-blue-600 text-[14px]" : "font-medium"} ${mono && !bold ? "tnum text-[11px]" : "tnum"}`}>{v}</dd>
+    <div className={`flex justify-between gap-3 ${bold ? "mb-1" : ""}`}>
+      <dt
+        title={hint}
+        className={`shrink-0 ${bold ? "font-bold text-gray-900 text-[15px]" : "text-ink-secondary"} ${
+          hint ? "cursor-help underline decoration-dotted decoration-gray-400 underline-offset-4" : ""
+        }`}
+      >
+        {k}
+      </dt>
+      <dd className={`text-right ${bold ? "font-bold text-blue-600 text-[17px]" : "font-medium"} ${mono && !bold ? "tnum text-[12px]" : "tnum"}`}>{v}</dd>
     </div>
   );
 }
