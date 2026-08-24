@@ -81,7 +81,28 @@ function SidebarContent({ run, baseline, runningElapsedSec, refresh }: { run: Ru
         <dl className="grid grid-cols-2 gap-y-1">
           <div>
             <dt className="text-sm font-medium text-gray-500 mb-1">주제</dt>
-            <dd className="text-lg font-bold text-gray-800">{run.domain}</dd>
+            {/*
+              🔴 **`run.domain` 은 주제가 아니라 저장 폴더 이름이다.** 업로드 갈래에서
+                 같은 이름이 이미 있으면 백엔드가 `EV 충전소_2` 로 폴더를 새로 판다
+                 (`page.tsx` 의 `uploadedDomain.actual`). 그걸 그대로 「주제」에 찍으면
+                 사람이 친 적 없는 이름이 분석 주제로 둔갑한다 — 화면1 은 이미
+                 「바뀐 것은 저장 폴더지 분석 주제가 아니다」라고 적어두고 있어서
+                 두 화면이 서로 다른 말을 하게 된다(2026-08-24 사람 지시).
+
+              ⚠ 폴더 이름을 **감추지는 않는다.** 꼬리를 뗀 이름만 남기면 결과가
+                어느 폴더에서 나왔는지 화면 어디에도 안 남는다(원칙 4). 달라질 때만
+                아래에 작게 적는다.
+              ⚠ 사이드바는 사람이 친 원래 이름을 모른다 — `RunDoc` 에 그 값이 없다.
+                그래서 꼬리를 **문자열에서 떼는 수밖에 없고**, 사람이 진짜로
+                `EV 충전소_2` 라고 친 경우엔 주제가 한 칸 틀리게 적힌다. 그 경우에도
+                아래 「저장 폴더」 줄에 실제 값이 남으므로 틀린 채로 묻히지는 않는다.
+            */}
+            <dd className="text-lg font-bold text-gray-800">{topicOf(run.domain)}</dd>
+            {topicOf(run.domain) !== run.domain && (
+              <dd className="text-[11px] text-gray-400 mt-0.5">
+                저장 폴더 <code className="font-mono">{run.domain}</code>
+              </dd>
+            )}
           </div>
           <div>
             <dt className="text-sm font-medium text-gray-500 mb-1">모드</dt>
@@ -157,6 +178,16 @@ function SidebarContent({ run, baseline, runningElapsedSec, refresh }: { run: Ru
       )}
     </div>
   );
+}
+
+/**
+ * 저장 폴더 이름에서 겹침 회피 꼬리(`_2`, `_3` …)를 떼어 주제로 되돌린다.
+ *
+ * ⚠ `_숫자` 로 **끝날 때만** 뗀다. `_` 를 통째로 자르면 `공공_와이파이` 같은
+ *   이름이 「공공」이 된다.
+ */
+function topicOf(domain: string): string {
+  return domain.replace(/_\d+$/, "");
 }
 
 function GateBlock({ run, onRefresh }: { run: RunDoc; onRefresh: () => void }) {
