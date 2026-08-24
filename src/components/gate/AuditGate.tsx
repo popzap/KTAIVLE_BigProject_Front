@@ -33,6 +33,33 @@ import type {
   RunGate,
 } from "@/lib/omnisite/types";
 
+/**
+ * 게이트A 선택지 이름을 **화면에서만** 갈아 끼운다.
+ *
+ * 🔴 **서버가 준 `label` 을 다른 이름으로 부르는 짓이다.** 원래는 안 하는 게 맞다
+ *    (화면이 서버와 다른 낱말을 쓰면 백엔드 로그·문서와 대조가 안 된다). 그래도
+ *    넣은 이유: `reference_only` 의 서버 이름 「위치선정 참조용」이 **하는 일과
+ *    반대로 읽힌다.** 이 역할의 정의는 「입지 판정의 입력 팩터가 **아님**」인데,
+ *    이름은 위치선정이 참조한다고 말한다 — 사용자는 「위치를 고를 때 참고는
+ *    되는 값」으로 읽고 고르게 된다(2026-08-24 사람 지시).
+ *
+ * 🔴 **`value` 번호가 아니라 서버 문자열 자체를 키로 쓴다.** `value === 4` 로 짜면
+ *    백엔드가 번호를 바꿨을 때 **엉뚱한 선택지가 조용히 개명된다.** 문자열이
+ *    키면 서버가 문구를 바꾸는 순간 이 표가 안 맞아 **서버 이름이 그대로 나온다** —
+ *    틀린 이름이 아니라 낯선 이름이 뜨는 쪽이 안전하다.
+ *
+ * ⚠ **미검증**: 「토론」이라 적었지만, 이 저장소에서 `reference_only` 데이터가
+ *   실제로 화면5 토론 입력으로 들어간다는 근거는 못 찾았다. 확인된 것은
+ *   「입지 판정에는 안 쓴다」까지다. 백엔드가 아니라고 하면 이 표만 고치면 된다.
+ */
+const CHOICE_LABEL_OVERRIDE: Record<string, string> = {
+  "위치선정 참조용": "토론 참조용",
+};
+
+function choiceLabel(label: string): string {
+  return CHOICE_LABEL_OVERRIDE[label] ?? label;
+}
+
 /** 반경 답의 세 갈래. CLI 의 `s`(건너뜀) · `n`(반경 없음) · 숫자에 그대로 대응한다. */
 type RadiusMode = "skip" | "none" | "value";
 
@@ -597,7 +624,7 @@ function IntentCard({
             <div className="flex items-center gap-1.5">
               <span className="text-blue-600 font-medium">적용될 용도</span>
               <span className="font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded">
-                {picked ? picked.label : "미확정 (건너뜀)"}
+                {picked ? choiceLabel(picked.label) : "미확정 (건너뜀)"}
                 {picked?.needs_weight && state.weight ? ` (가중치: ${state.weight})` : ""}
                 {picked?.needs_radius && state.radiusMode === 'value' ? ` (반경: ${state.radiusValue}m)` : ""}
               </span>
@@ -618,7 +645,7 @@ function IntentCard({
                   name={`it-${q.dataset_id}`}
                   checked={state.choice === c.value}
                   onChange={() => onChange({ ...state, choice: c.value })}
-                  label={`${c.label}`}
+                  label={choiceLabel(c.label)}
                 />
               ))}
             </div>
@@ -647,7 +674,7 @@ function IntentCard({
               <div className="mt-2 rounded-lg border border-gray-200 bg-white p-3 shadow-sm animate-in fade-in slide-in-from-top-1">
                 <p className="font-bold text-gray-700 text-xs">배제 반경</p>
                 <p className="mt-1 text-xs text-gray-500">
-                  「{picked.label}」 은 <strong>새 배제 레이어를 만드는 선택</strong>이라 반경을 같이 정해야 합니다.
+                  「{choiceLabel(picked.label)}」 은 <strong>새 배제 레이어를 만드는 선택</strong>이라 반경을 같이 정해야 합니다.
                   여기서 정하지 않으면 미확정으로 남고, 다음 단계(정제)에서 실행이 멈춥니다.
                 </p>
                 <div className="mt-3 flex flex-wrap items-center gap-4">
