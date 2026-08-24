@@ -530,7 +530,23 @@ function TargetSection({ fi }: { fi: FacilityInference }) {
             *    그 구분이 없으면 화면 위쪽 안내문("AI가 분석한 결과입니다 맞는 지
             *    확인해주세요")이 확정 후에도 그대로 남아 무엇을 확인하라는지 흐려진다.
             */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden divide-x divide-gray-100">
+          {/**
+            * ⚠ 네 칸을 **똑같이 나누지 않는다.** 「입력」에는 화면1 이 조합해 보낸
+            *   문장이 통째로 들어온다 — 의도 문장 뒤에 `(시설 유형: …, 분석 지역: …)`
+            *   꼬리가 붙어서 다른 셋보다 서너 배 길다. 1/4 씩 주면 그 칸만 세 줄로
+            *   접히고 시설(`EV 충전소`)·지역 칸은 폭이 남는다.
+            *   `minmax(0,·)` 인 이유: 그냥 `1.7fr` 은 `minmax(auto,1.7fr)` 이라
+            *   긴 문장이 칸을 밀어내 표 전체가 넘친다.
+            *
+            * 🔴 **화면폭이 아니라 통 폭(`@container`)으로 판단한다.** 예전 `md:` 는
+            *    뷰포트 768px 만 보고 네 칸을 폈는데, 이 화면 오른쪽엔 420px 짜리
+            *    진행 사이드바가 늘 붙어 있어서 **뷰포트가 1280 이어도 표가 쓸 수 있는
+            *    폭은 600px 남짓**이다. 그 폭에 네 칸을 펴면 「시설」 칸 안쪽이 50px 도
+            *    안 남아 `EV 충전소` 마저 두 줄로 접힌다. 통이 896px(`@4xl`) 을 넘을
+            *    때만 네 칸으로 펴고, 그 아래에서는 2×2 로 둔다.
+            */}
+          <div className="@container">
+          <div className="grid grid-cols-2 @4xl:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)_minmax(0,1.7fr)_minmax(0,1fr)] gap-0 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden divide-x divide-gray-100">
             <KV icon={<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/></svg>} k="시설" v={fi.facility} />
             <KV icon={<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>} k="지역" v={fi.region} />
             <KV icon={<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>} k="입력" v={fi.source_input} />
@@ -540,6 +556,7 @@ function TargetSection({ fi }: { fi: FacilityInference }) {
               v={fi.confirmed ? "사람이 직접 확정함" : "AI 자동 추론됨"}
               tone={fi.confirmed ? "ok" : "info"}
             />
+          </div>
           </div>
 
 
