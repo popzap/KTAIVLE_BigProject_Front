@@ -119,8 +119,36 @@ const TRANSCRIPT_TAIL = 5;
 /**
  * 인쇄 스타일.
  *
- * 앱 골격이 `body { height:100%; overflow:hidden }` 에 좌우 분할이라, 그대로
- * 인쇄하면 **첫 화면만** 나온다. 그래서 인쇄일 때만 흐름을 되돌린다.
+ * 앱 골격은 **화면 한 장에 딱 맞춰 놓고 안쪽을 스크롤시키는** 구조다
+ * (`body > ScaleToFit > 캔버스 > 골격 > 분할행 > main > PageBody > .doc-flow`).
+ * 그대로 인쇄하면 **첫 화면만** 나온다. 그래서 인쇄일 때만 그 사슬을 통째로 푼다.
+ *
+ * 🔴 **조상을 「자리」로 지목하지 않는다 — `:has()` 로 「관계」로 지목한다.**
+ *    예전엔 `body > div, main, .doc-flow` 셋을 이름으로 적었다. 그 뒤
+ *    `ScaleToFit` 이 최상단에 끼면서 `body > div` 가 가리키는 노드가 바뀌었고,
+ *    새로 생긴 두 겹(캔버스·골격)과 공용 `PageBody` 가 목록 밖으로 밀려나
+ *    **경고 한 줄 없이** 1페이지짜리 PDF 가 나왔다(2026-08-20 실측: A4 세로가
+ *    841.92pt 인데 내용이 791.46pt 에서 끊기고 **스크롤바까지 찍혔다** — 페이지를
+ *    넘쳐서 잘린 게 아니라 통 안에서 잘린 것이다).
+ *
+ *    `body :has(.doc-flow)` 는 **보고서를 담고 있는 상자 전부**를 뜻한다. 골격이
+ *    또 바뀌어 겹이 늘거나 줄어도 조상은 여전히 조상이라 선택자가 따라온다.
+ *    `body > div > div > div div` 처럼 후손을 통으로 여는 방법도 있었지만 그건
+ *    보고서 **안쪽**까지 열어서 문서 자체 레이아웃을 망가뜨린다 — `:has()` 는
+ *    사슬만 정확히 집는다.
+ *
+ * 🔴 **`position` 과 `transform` 을 반드시 같이 푼다.** 높이·overflow 만 풀면
+ *    안 고쳐진다:
+ *    · `transform: scale()` 이 걸린 박스는 **자체 containing block** 이 되어
+ *      페이지를 못 나눈다. 통째로 한 번만 그려진다.
+ *    · `position: fixed` 는 Chromium 인쇄에서 **첫 페이지에만** 그려지고 페이지
+ *      상자에 잘린다.
+ *    캔버스의 인라인 높이가 정확히 뷰포트 한 장(`100dvh / var(--fit)`)이라
+ *    `height`·`width` 도 함께 풀어야 한다.
+ *
+ * ⚠ **`!important` 가 필수다.** `ScaleToFit` 의 제약은 스타일시트가 아니라
+ *   **인라인 `style` 속성**이라(`ScaleToFit.tsx:76,87`) 안 붙이면 못 이긴다.
+ *
  * `header`·`footer`·`aside` 는 레이아웃(`app/layout.tsx`)이 그리는 앱 크롬이라
  * 이 파일에서 클래스를 붙일 수 없어 **요소 선택자**로 숨긴다.
  * `.fixed` 는 사이드바가 접혔을 때 남는 토글 버튼이다(Tailwind 클래스가 그대로
@@ -129,17 +157,28 @@ const TRANSCRIPT_TAIL = 5;
 const PRINT_CSS = `
 @media print {
   @page { size: A4; margin: 14mm; }
+
   html, body {
     height: auto !important;
     overflow: visible !important;
     background: #fff !important;
   }
-  body > div, main, .doc-flow {
+
+  /* 보고서를 담고 있는 상자 전부 + 보고서 자신. 순서·개수를 안 적는 게 요점이다. */
+  body :has(.doc-flow), .doc-flow {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    display: block !important;
+    width: auto !important;
     height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
     overflow: visible !important;
+    flex: none !important;
+    background: transparent !important;
   }
+
   header, footer, aside, .fixed, .doc-hide { display: none !important; }
   .doc-section { break-inside: avoid; }
 }
