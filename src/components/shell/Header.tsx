@@ -21,6 +21,7 @@ import { isHearingDoneFor } from "@/lib/omnisite/hearingResult";
 import { useHearingDone } from "@/lib/omnisite/hearings";
 import type { ArtifactName, RunDoc } from "@/lib/omnisite/types";
 import { AuthModal } from "./AuthModal";
+import { DEMO } from "@/lib/omnisite/demo";
 import { SessionBadge } from "./SessionBadge";
 import { getAuthUser, clearAuth, UserResponse } from "@/lib/omnisite/auth";
 import { cancelRun } from "@/lib/omnisite/pipeline";
@@ -404,7 +405,9 @@ export function Header() {
           </nav>
 
           <div className="flex shrink-0 items-center gap-4 ml-4">
-            {run && (
+            {/* DEMO: 이 버튼은 서버의 run·업로드 파일을 지운다 — 지울 서버가 없다.
+                처음부터 다시 보기는 `DemoBanner` 가 맡는다. */}
+            {run && !DEMO && (
               <button
                 onClick={openResetConfirm}
                 disabled={resetting || counting}
@@ -420,7 +423,8 @@ export function Header() {
               </button>
             )}
 
-            {/* 유틸리티 링크 (가이드라인 준수) */}
+            {/* 유틸리티 링크 (가이드라인 준수). DEMO 에서는 게시판·로그인이 녹화 밖이다. */}
+            {!DEMO && (
             <div className="flex items-center gap-3 text-[12px] text-gray-600 font-medium">
               <Link href="/posts" className="hover:text-primary transition-colors font-semibold flex items-center gap-1 text-primary/90 bg-primary/8 px-2 py-1 rounded">
                 <span>📋</span> 게시판
@@ -445,6 +449,7 @@ export function Header() {
                 </>
               )}
             </div>
+            )}
 
           </div>
         </div>

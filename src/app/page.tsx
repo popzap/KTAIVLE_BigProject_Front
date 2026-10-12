@@ -15,6 +15,7 @@ import {
 import { useRun } from "@/lib/omnisite/RunProvider";
 import { SCREENS } from "@/lib/omnisite/screens";
 import { fetchDomains, type DomainItem } from "@/lib/omnisite/upload";
+import { DEMO } from "@/lib/omnisite/demo";
 
 const SCREEN = SCREENS[0]!;
 
@@ -58,7 +59,9 @@ export default function Screen1Page() {
 
   // 「고속 자동 분석」. mode 와 **다른 축**이다 — 게이트를 빼는 게 아니라
   // 그 자리를 AI 제안값으로 답한다. 그래서 두 갈래(upload/preset) 다 고를 수 있다.
-  const [autoApprove, setAutoApprove] = useState(false);
+  // DEMO: 기록된 실행이 고속(auto_approve)이라 그쪽을 먼저 골라 둔다. 바꿀 수는 있지만
+  //       그러면 시작 요청이 녹화와 달라 재생되지 않는다(`demo.ts`).
+  const [autoApprove, setAutoApprove] = useState(DEMO);
   const [inputError, setInputError] = useState<string | null>(null);
 
   const [activeStep, setActiveStep] = useState(1);
@@ -605,10 +608,14 @@ function BackLink({ onClick }: { onClick: () => void }) {
 function SourcePicker({ onPick }: { onPick: (s: DataSource) => void }) {
   return (
     <div className="grid gap-6 sm:grid-cols-2">
+      {/* DEMO: 업로드는 녹화 밖이다(파일을 받을 서버가 없다). 카드를 지우지 않고
+          막는 이유 — 지우면 화면이 원래 무엇을 하는지 안 보인다. */}
       <button
         type="button"
         onClick={() => onPick("upload")}
-        className="flex flex-col items-center justify-center p-8 border-2 border-gray-200 rounded-2xl hover:border-blue-500 hover:bg-blue-50/50 transition-all duration-300 group"
+        disabled={DEMO}
+        title={DEMO ? "데모에서는 업로드를 쓰지 않습니다 — 프리셋 모드로 진행하세요" : undefined}
+        className="flex flex-col items-center justify-center p-8 border-2 border-gray-200 rounded-2xl hover:border-blue-500 hover:bg-blue-50/50 transition-all duration-300 group disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-gray-200 disabled:hover:bg-transparent"
       >
         <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>

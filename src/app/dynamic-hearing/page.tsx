@@ -27,7 +27,7 @@
  * 적고, 하나도 없으면 **없다고 적는다.**
  */
 
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Info, Users, MessageSquare } from "lucide-react";
 
@@ -45,6 +45,7 @@ import {
   type PersonaScope,
 } from "@/lib/omnisite/personaCache";
 import { writeHearingB } from "@/lib/omnisite/hearingResult";
+import { DEMO, demoDiscussInputs } from "@/lib/omnisite/demo";
 import type { ReviewedDoc } from "@/lib/omnisite/types";
 
 import { SetupStep } from "./_components/SetupStep";
@@ -247,6 +248,30 @@ export default function DynamicHearingPage() {
 
   const [personas, setPersonas] = useState<Persona[]>([]);
   const [selectedPersonaIds, setSelectedPersonaIds] = useState<Set<number>>(new Set());
+
+  /**
+   * DEMO: 녹화한 다인 토론의 입력(목적·고른 페르소나). 재생은 요청 본문이 녹화와
+   * 같아야 되므로(`demo.ts`) 같은 값을 미리 채우고 같은 사람만 골라 둔다.
+   * 사람이 바꿀 수는 있다 — 그러면 「기록에 없는 동작」으로 막힌다.
+   */
+  const demoInputs = useRef<{ purpose: string; personaNames: string[] } | null>(null);
+  useEffect(() => {
+    if (!DEMO) return;
+    void demoDiscussInputs().then((v) => {
+      demoInputs.current = v;
+      if (v) setPurpose((p) => p || v.purpose);
+    });
+  }, []);
+
+  /** 새로 받은 페르소나의 기본 선택. 평소엔 전원, DEMO 면 녹화에서 고른 사람만. */
+  const defaultSelection = (list: Persona[], from: number, prev: Set<number>) => {
+    const next = new Set(prev);
+    const names = demoInputs.current?.personaNames;
+    for (let i = from; i < list.length; i++) {
+      if (!names || names.includes(list[i]!.display_name)) next.add(i);
+    }
+    return next;
+  };
   const [isLoading, setIsLoading] = useState(false);
   const [personaFailure, setPersonaFailure] = useState<Failure | null>(null);
 
@@ -394,11 +419,7 @@ export default function DynamicHearingPage() {
         }));
         const updated = [...base, ...mapped];
         setPersonas(updated);
-        setSelectedPersonaIds((prev) => {
-          const next = new Set(prev);
-          for (let i = base.length; i < updated.length; i++) next.add(i);
-          return next;
-        });
+        setSelectedPersonaIds((prev) => defaultSelection(updated, base.length, prev));
         writePersonas(currentScope, updated);
       } catch (e) {
         // 🔴 `alert("페르소나 생성 실패")` 로 뭉개지 않는다. 백엔드는 실패 사유를
@@ -424,7 +445,7 @@ export default function DynamicHearingPage() {
     const cached = readPersonas(scope);
     if (cached) {
       setPersonas(cached);
-      setSelectedPersonaIds(new Set(cached.map((_, i) => i)));
+      setSelectedPersonaIds(defaultSelection(cached, 0, new Set()));
       setPersonaFailure(null);
       return;
     }
