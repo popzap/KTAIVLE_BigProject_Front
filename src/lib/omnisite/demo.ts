@@ -110,6 +110,24 @@ export async function demoDiscussInputs(): Promise<{ purpose: string; personaNam
   };
 }
 
+/**
+ * 녹화에서 토론한 후보지. 화면 4 가 이 필지만 고를 수 있게 잠그는 데 쓴다.
+ * 토론 요청의 `parcel_id` 를 같은 녹화의 후보 목록(`/simulations/candidates`)에서
+ * 찾아 PNU 로 바꾼다 — 화면 4 는 PNU 로 고른 위치를 넘긴다(`sitePick`).
+ * 토론 녹화가 없거나 목록에서 못 찾으면 `null` 이다(잠그지 않고 막지도 않는다).
+ */
+export async function demoRecordedSite(): Promise<{ pnu: string; rank: number; jibun: string } | null> {
+  const m = await loadDemoManifest();
+  const req =
+    (await recordedRequestBody<{ parcel_id?: number }>("POST", "/api/v1/simulations/stream")) ??
+    (await recordedRequestBody<{ parcel_id?: number }>("POST", "/api/v1/stakeholders/generate"));
+  const list = m.entries.find((e) => e.method === "GET" && e.path.startsWith("/api/v1/simulations/candidates") && e.body_file);
+  if (req?.parcel_id == null || !list?.body_file) return null;
+  const doc = await loadDemoJson<{ candidates?: { parcel_id: number; pnu: string; rank: number; jibun: string }[] }>(list.body_file);
+  const hit = doc.candidates?.find((c) => c.parcel_id === req.parcel_id);
+  return hit ? { pnu: hit.pnu, rank: hit.rank, jibun: hit.jibun } : null;
+}
+
 // ── 기준점 ───────────────────────────────────────────────────
 
 function readAnchor(): Anchor {

@@ -16,7 +16,7 @@
  *    CSV 쪽이어야 한다. 두 곳의 순위·점수는 같지만 좌표는 한쪽에만 있으므로
  *    "report 에서 읽었다"고 적으면 그건 거짓 출처 기록이다.
  */
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import { ArtifactView2 } from "@/components/ui/ArtifactView";
 import { GridMap, polygonsOf } from "@/components/map/GridMap";
@@ -24,6 +24,7 @@ import { PageFooter, PageHeader, SourceNote } from "@/components/ui/Page";
 import { useArtifact } from "@/lib/omnisite/useArtifact";
 import { useRun } from "@/lib/omnisite/RunProvider";
 import { writeSitePick } from "@/lib/omnisite/sitePick";
+import { DEMO, demoRecordedSite } from "@/lib/omnisite/demo";
 import { loadExclusion, loadReport, loadScoreGrid, loadTopN, loadWeightSet } from "@/lib/omnisite/pipeline";
 import { areaM2, fixed, int, percent } from "@/lib/omnisite/format";
 import { jimokLabel } from "@/lib/omnisite/jimok";
@@ -76,9 +77,33 @@ export default function Screen4Page() {
   const [showInfo, setShowInfo] = useState(false);
 
   /**
+   * DEMO: 녹화에서 토론한 후보지(PNU). 그 필지만 고를 수 있다 — 다른 후보로
+   * 화면 5 를 열면 토론 요청이 녹화와 달라 재생되지 않는다(`demo.ts`).
+   * 고를 수 있는 게 하나뿐이라 들어오면 미리 골라 둔다.
+   * `undefined` = 아직 읽는 중(그동안은 아무것도 못 고른다), `null` = 데모 아님/잠금 없음.
+   */
+  const [demoPnu, setDemoPnu] = useState<string | null | undefined>(DEMO ? undefined : null);
+  useEffect(() => {
+    if (!DEMO) return;
+    void demoRecordedSite().then((s) => setDemoPnu(s?.pnu ?? null));
+  }, []);
+  const demoRank =
+    demoPnu ? (topn.data?.find((r) => r.PNU === demoPnu)?.순위 ?? null) : null;
+  const lockedOut = (rank: number) =>
+    DEMO && (demoPnu === undefined || (demoPnu !== null && rank !== demoRank));
+
+  const autoPicked = useRef(false);
+  useEffect(() => {
+    if (demoRank === null || autoPicked.current) return;
+    autoPicked.current = true;
+    setSelected(demoRank);
+  }, [demoRank]);
+
+  /**
    * 빈 지도를 눌러 선택을 지우면(`null`) 상세 팝업이 닫힙니다.
    */
   function select(rank: number | null) {
+    if (rank !== null && lockedOut(rank)) return;
     setSelected(rank);
   }
 
@@ -250,7 +275,7 @@ export default function Screen4Page() {
 
                       <div className="min-h-0 flex-1 custom-scrollbar overflow-y-auto p-4 flex flex-col gap-6">
                         <Coverage report={report.data} nTop={rows.length} />
-                        <TopList rows={rows} selected={selected} onSelect={select} />
+                        <TopList rows={rows} selected={selected} onSelect={select} lockedOut={lockedOut} />
                       </div>
                     </aside>
                   </div>
@@ -360,10 +385,13 @@ function TopList({
   rows,
   selected,
   onSelect,
+  lockedOut,
 }: {
   rows: TopNCsvRow[];
   selected: number | null;
   onSelect: (rank: number) => void;
+  /** DEMO 에서 고를 수 없는 행(녹화한 후보가 아니다). 데모가 아니면 항상 `false`. */
+  lockedOut: (rank: number) => boolean;
 }) {
   const [showRankInfo, setShowRankInfo] = useState(false);
   const sorted = [...rows].sort((a, b) => a.순위 - b.순위);
@@ -400,14 +428,17 @@ function TopList({
       <ul className="mt-1 flex flex-col gap-1">
         {sorted.map((r) => {
           const on = r.순위 === selected;
+          const locked = lockedOut(r.순위);
           return (
             <li key={r.순위}>
               <button
                 type="button"
                 onClick={() => onSelect(r.순위)}
+                disabled={locked}
+                title={locked ? "데모는 기록된 실행에서 토론한 후보만 고를 수 있습니다" : undefined}
                 aria-current={on ? "true" : undefined}
-                className={`flex w-full items-center gap-2 rounded px-2 py-1.5 text-left ${
-                  on ? "bg-primary/10 ring-1 ring-primary/40" : "hover:bg-black/[0.04]"
+                className={`flex w-full items-center gap-2 rounded px-2 py-1.5 text-left disabled:cursor-not-allowed disabled:opacity-40 ${
+                  on ? "bg-primary/10 ring-1 ring-primary/40" : "hover:bg-black/[0.04] disabled:hover:bg-transparent"
                 }`}
               >
                 <span className="tnum w-6 shrink-0 text-[12px] font-semibold text-primary">
