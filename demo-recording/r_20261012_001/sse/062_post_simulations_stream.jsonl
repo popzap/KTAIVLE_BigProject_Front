@@ -1,0 +1,1599 @@
+{"t_ms": 0, "event": "message", "data": "{\"sender\": \"시스템\", \"text\": \"선택된 위치(지번: 서울특별시 용산구 422 대)의 흡연부스 모의 심의를 시작합니다...\", \"is_finished\": false}"}
+{"t_ms": 8326, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"입\", \"is_finished\": false}"}
+{"t_ms": 8326, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 8335, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 분석\", \"is_finished\": false}"}
+{"t_ms": 8335, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 결과\", \"is_finished\": false}"}
+{"t_ms": 8353, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 8353, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 따르면\", \"is_finished\": false}"}
+{"t_ms": 8374, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 8374, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 8384, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 8385, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 주변\", \"is_finished\": false}"}
+{"t_ms": 8397, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에는\", \"is_finished\": false}"}
+{"t_ms": 8398, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 8425, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 8426, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 8438, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 8438, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 8456, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 8456, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 8477, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 8477, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"9\", \"is_finished\": false}"}
+{"t_ms": 8491, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 8491, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 8503, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 있으며\", \"is_finished\": false}"}
+{"t_ms": 8504, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 8515, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 8516, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"로\", \"is_finished\": false}"}
+{"t_ms": 8527, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 인해\", \"is_finished\": false}"}
+{"t_ms": 8527, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 유\", \"is_finished\": false}"}
+{"t_ms": 8540, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"동\", \"is_finished\": false}"}
+{"t_ms": 8540, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 8552, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 8552, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 8582, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 많\", \"is_finished\": false}"}
+{"t_ms": 8583, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"아\", \"is_finished\": false}"}
+{"t_ms": 8597, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 8597, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 8606, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 8606, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 8619, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 8619, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 8638, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"요\", \"is_finished\": false}"}
+{"t_ms": 8638, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 8649, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 높\", \"is_finished\": false}"}
+{"t_ms": 8649, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"일\", \"is_finished\": false}"}
+{"t_ms": 8661, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 8661, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 있습니다\", \"is_finished\": false}"}
+{"t_ms": 8663, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 8664, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 또한\", \"is_finished\": false}"}
+{"t_ms": 8685, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 8685, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 8700, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"생활\", \"is_finished\": false}"}
+{"t_ms": 8700, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 8719, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 8719, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 통\", \"is_finished\": false}"}
+{"t_ms": 8768, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"계\", \"is_finished\": false}"}
+{"t_ms": 8768, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 8796, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"와\", \"is_finished\": false}"}
+{"t_ms": 8796, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 8817, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"상\", \"is_finished\": false}"}
+{"t_ms": 8817, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 8831, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 및\", \"is_finished\": false}"}
+{"t_ms": 8831, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 상\", \"is_finished\": false}"}
+{"t_ms": 8841, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"권\", \"is_finished\": false}"}
+{"t_ms": 8841, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 정보\", \"is_finished\": false}"}
+{"t_ms": 8855, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 8855, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 8865, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 따르면\", \"is_finished\": false}"}
+{"t_ms": 8865, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 8881, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 8882, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 지역\", \"is_finished\": false}"}
+{"t_ms": 8894, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 8894, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 상\", \"is_finished\": false}"}
+{"t_ms": 8905, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"업\", \"is_finished\": false}"}
+{"t_ms": 8905, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 활동\", \"is_finished\": false}"}
+{"t_ms": 8912, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 8912, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 활\", \"is_finished\": false}"}
+{"t_ms": 8935, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"발\", \"is_finished\": false}"}
+{"t_ms": 8935, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"하여\", \"is_finished\": false}"}
+{"t_ms": 8947, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 8947, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 8968, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 8968, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 8980, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 8981, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 8989, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 8990, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 지역\", \"is_finished\": false}"}
+{"t_ms": 9000, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 경제\", \"is_finished\": false}"}
+{"t_ms": 9001, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 활성\", \"is_finished\": false}"}
+{"t_ms": 9011, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"화\", \"is_finished\": false}"}
+{"t_ms": 9011, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 9028, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 기\", \"is_finished\": false}"}
+{"t_ms": 9028, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"여\", \"is_finished\": false}"}
+{"t_ms": 9031, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 9031, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 것입니다\", \"is_finished\": false}"}
+{"t_ms": 9057, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 9057, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 9074, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 9074, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"로\", \"is_finished\": false}"}
+{"t_ms": 9085, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"휴\", \"is_finished\": false}"}
+{"t_ms": 9086, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 9101, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"통\", \"is_finished\": false}"}
+{"t_ms": 9101, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 9114, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 9114, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"17\", \"is_finished\": false}"}
+{"t_ms": 9124, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 9124, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 9148, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 있다는\", \"is_finished\": false}"}
+{"t_ms": 9148, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 점\", \"is_finished\": false}"}
+{"t_ms": 9158, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"도\", \"is_finished\": false}"}
+{"t_ms": 9159, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 9170, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 9170, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 후\", \"is_finished\": false}"}
+{"t_ms": 9182, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 쓰\", \"is_finished\": false}"}
+{"t_ms": 9182, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"레\", \"is_finished\": false}"}
+{"t_ms": 9200, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"기\", \"is_finished\": false}"}
+{"t_ms": 9200, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 처리\", \"is_finished\": false}"}
+{"t_ms": 9206, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 문제\", \"is_finished\": false}"}
+{"t_ms": 9206, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 9228, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 해결\", \"is_finished\": false}"}
+{"t_ms": 9229, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"하는\", \"is_finished\": false}"}
+{"t_ms": 9249, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 긍\", \"is_finished\": false}"}
+{"t_ms": 9249, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 9297, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"적\", \"is_finished\": false}"}
+{"t_ms": 9297, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 요\", \"is_finished\": false}"}
+{"t_ms": 9332, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 9332, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"으로\", \"is_finished\": false}"}
+{"t_ms": 9350, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 작\", \"is_finished\": false}"}
+{"t_ms": 9350, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"용\", \"is_finished\": false}"}
+{"t_ms": 9361, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 9361, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 9371, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 있습니다\", \"is_finished\": false}"}
+{"t_ms": 9372, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 9382, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이러한\", \"is_finished\": false}"}
+{"t_ms": 9382, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 요소\", \"is_finished\": false}"}
+{"t_ms": 9395, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"들이\", \"is_finished\": false}"}
+{"t_ms": 9395, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 결\", \"is_finished\": false}"}
+{"t_ms": 9417, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"합\", \"is_finished\": false}"}
+{"t_ms": 9417, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"되어\", \"is_finished\": false}"}
+{"t_ms": 9434, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 9435, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 9445, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"지는\", \"is_finished\": false}"}
+{"t_ms": 9445, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 9458, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 9459, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 9482, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 9482, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 9497, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 9497, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 적\", \"is_finished\": false}"}
+{"t_ms": 9517, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"합\", \"is_finished\": false}"}
+{"t_ms": 9517, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"한\", \"is_finished\": false}"}
+{"t_ms": 9530, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 위치\", \"is_finished\": false}"}
+{"t_ms": 9530, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"임\", \"is_finished\": false}"}
+{"t_ms": 9546, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 9546, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 확\", \"is_finished\": false}"}
+{"t_ms": 9577, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"실\", \"is_finished\": false}"}
+{"t_ms": 9578, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"히\", \"is_finished\": false}"}
+{"t_ms": 9587, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 보여\", \"is_finished\": false}"}
+{"t_ms": 9587, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"줍\", \"is_finished\": false}"}
+{"t_ms": 9599, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"니다\", \"is_finished\": false}"}
+{"t_ms": 9600, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 9635, "event": "message", "data": "{\"sender\": \"\", \"text\": \"\\n\\n\", \"is_finished\": false}"}
+{"t_ms": 10848, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 10848, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 10857, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 10857, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 10868, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 10869, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 10882, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 10882, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"9\", \"is_finished\": false}"}
+{"t_ms": 10895, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 10895, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 있다는\", \"is_finished\": false}"}
+{"t_ms": 10912, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 점\", \"is_finished\": false}"}
+{"t_ms": 10913, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 10933, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 인정\", \"is_finished\": false}"}
+{"t_ms": 10933, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하지만\", \"is_finished\": false}"}
+{"t_ms": 10944, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 10945, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 11126, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 11126, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 11127, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 11127, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 11128, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 11128, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 11129, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 11129, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 11130, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"내\", \"is_finished\": false}"}
+{"t_ms": 11130, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 11130, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 11131, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 11131, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 11132, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 11132, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 11132, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 11139, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 11140, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 11140, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 위치\", \"is_finished\": false}"}
+{"t_ms": 11141, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"해\", \"is_finished\": false}"}
+{"t_ms": 11141, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 있어\", \"is_finished\": false}"}
+{"t_ms": 11142, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 11142, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 11142, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 11148, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 11148, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 11149, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 11149, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 11150, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 11150, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 11151, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 11151, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 11160, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 11160, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 11160, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"내\", \"is_finished\": false}"}
+{"t_ms": 11161, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 11167, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 11168, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 11185, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 11185, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"라는\", \"is_finished\": false}"}
+{"t_ms": 11197, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 조\", \"is_finished\": false}"}
+{"t_ms": 11197, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"례\", \"is_finished\": false}"}
+{"t_ms": 11219, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 11220, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 따라\", \"is_finished\": false}"}
+{"t_ms": 11229, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 11229, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 11244, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 11244, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"스를\", \"is_finished\": false}"}
+{"t_ms": 11261, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 11261, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 11277, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 11277, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 없습니다\", \"is_finished\": false}"}
+{"t_ms": 11288, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 11288, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 또한\", \"is_finished\": false}"}
+{"t_ms": 11294, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 11294, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 유\", \"is_finished\": false}"}
+{"t_ms": 11300, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"동\", \"is_finished\": false}"}
+{"t_ms": 11301, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 11417, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 11418, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 11418, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 많\", \"is_finished\": false}"}
+{"t_ms": 11418, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"다는\", \"is_finished\": false}"}
+{"t_ms": 11419, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 것은\", \"is_finished\": false}"}
+{"t_ms": 11420, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 보\", \"is_finished\": false}"}
+{"t_ms": 11420, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"행\", \"is_finished\": false}"}
+{"t_ms": 11420, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"자\", \"is_finished\": false}"}
+{"t_ms": 11421, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에게\", \"is_finished\": false}"}
+{"t_ms": 11421, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 불\", \"is_finished\": false}"}
+{"t_ms": 11422, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"편\", \"is_finished\": false}"}
+{"t_ms": 11422, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 11423, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 초\", \"is_finished\": false}"}
+{"t_ms": 11423, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"래\", \"is_finished\": false}"}
+{"t_ms": 11429, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하고\", \"is_finished\": false}"}
+{"t_ms": 11429, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 11450, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 11450, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"금\", \"is_finished\": false}"}
+{"t_ms": 11455, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 11455, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 11471, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 11471, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 11474, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 11475, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 11512, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"반\", \"is_finished\": false}"}
+{"t_ms": 11513, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 11525, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 11525, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"300\", \"is_finished\": false}"}
+{"t_ms": 11531, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 11531, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 안\", \"is_finished\": false}"}
+{"t_ms": 11544, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 11544, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 11555, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"3\", \"is_finished\": false}"}
+{"t_ms": 11555, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 11572, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 11572, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 존재\", \"is_finished\": false}"}
+{"t_ms": 11582, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하여\", \"is_finished\": false}"}
+{"t_ms": 11583, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 11585, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 지역\", \"is_finished\": false}"}
+{"t_ms": 11585, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 11597, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 공\", \"is_finished\": false}"}
+{"t_ms": 11598, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"공\", \"is_finished\": false}"}
+{"t_ms": 11609, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 11610, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"과\", \"is_finished\": false}"}
+{"t_ms": 11625, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 건강\", \"is_finished\": false}"}
+{"t_ms": 11626, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"권\", \"is_finished\": false}"}
+{"t_ms": 11633, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 11633, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 심\", \"is_finished\": false}"}
+{"t_ms": 11645, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"각\", \"is_finished\": false}"}
+{"t_ms": 11645, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하게\", \"is_finished\": false}"}
+{"t_ms": 11663, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 위\", \"is_finished\": false}"}
+{"t_ms": 11664, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"협\", \"is_finished\": false}"}
+{"t_ms": 11677, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 11677, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 11698, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 있습니다\", \"is_finished\": false}"}
+{"t_ms": 11698, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 11751, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이런\", \"is_finished\": false}"}
+{"t_ms": 11751, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이유\", \"is_finished\": false}"}
+{"t_ms": 11766, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"로\", \"is_finished\": false}"}
+{"t_ms": 11766, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 11777, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 11777, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"지는\", \"is_finished\": false}"}
+{"t_ms": 11786, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 11786, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 11793, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 11794, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 11808, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 11808, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 11810, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 부\", \"is_finished\": false}"}
+{"t_ms": 11810, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"적\", \"is_finished\": false}"}
+{"t_ms": 11822, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"합\", \"is_finished\": false}"}
+{"t_ms": 11822, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 11824, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"다고\", \"is_finished\": false}"}
+{"t_ms": 11825, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 생각\", \"is_finished\": false}"}
+{"t_ms": 11843, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 11844, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 11872, "event": "message", "data": "{\"sender\": \"\", \"text\": \"\\n\\n\", \"is_finished\": false}"}
+{"t_ms": 13745, "event": null, "data": null, "comment": "ping - 2026-10-12 10:51:20.242601+00:00"}
+{"t_ms": 14266, "event": "message", "data": "{\"sender\": \"시스템\", \"text\": \"💡 [라운드 1 분석] 찬성측 수용도: 65.0%, 반대측 수용도: 55.0%\\n👉 (현재 CSS) 찬성: LOW / 반대: MEDIUM\\n📝 사유: 찬성 측은 구체적인 데이터(버스정류소 9개, 가로휴지통 17개 등)를 제시하며 후보지의 장점을 강조했으나, 반대 측은 조례에 따른 설치 금지와 공공 안전 문제를 명확히 지적하여 반대 의견을 제시했다. 양측 모두 구체적인 근거를 제시했지만, 찬성 측이 상대적으로 더 많은 긍정적 요소를 강조하여 수용도가 높게 평가됨.\\n\\n\", \"is_finished\": false, \"metrics\": {\"pro_acc\": 0.65, \"con_acc\": 0.55, \"css_pro\": \"LOW\", \"css_con\": \"MEDIUM\", \"eval_error\": null}}"}
+{"t_ms": 15004, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 15005, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 15018, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 15018, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 15029, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 15029, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 15115, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 15115, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 15161, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 15161, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 15163, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 15163, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 15178, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"내\", \"is_finished\": false}"}
+{"t_ms": 15179, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 15182, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 위치\", \"is_finished\": false}"}
+{"t_ms": 15182, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"해\", \"is_finished\": false}"}
+{"t_ms": 15185, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 있다는\", \"is_finished\": false}"}
+{"t_ms": 15185, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 점\", \"is_finished\": false}"}
+{"t_ms": 15187, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 15188, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 맞\", \"is_finished\": false}"}
+{"t_ms": 15189, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"습니다\", \"is_finished\": false}"}
+{"t_ms": 15189, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"만\", \"is_finished\": false}"}
+{"t_ms": 15202, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 15203, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 15204, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"흡\", \"is_finished\": false}"}
+{"t_ms": 15204, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 15207, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 15207, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 15220, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 15220, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"는\", \"is_finished\": false}"}
+{"t_ms": 15231, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 15231, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 15308, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 15308, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 15309, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에서\", \"is_finished\": false}"}
+{"t_ms": 15310, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 15337, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 15337, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 15348, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이상\", \"is_finished\": false}"}
+{"t_ms": 15349, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 떨어\", \"is_finished\": false}"}
+{"t_ms": 15351, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"진\", \"is_finished\": false}"}
+{"t_ms": 15352, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 곳\", \"is_finished\": false}"}
+{"t_ms": 15353, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 15354, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 가능\", \"is_finished\": false}"}
+{"t_ms": 15356, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 15356, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 15362, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"므로\", \"is_finished\": false}"}
+{"t_ms": 15363, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 15384, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 정확\", \"is_finished\": false}"}
+{"t_ms": 15385, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"한\", \"is_finished\": false}"}
+{"t_ms": 15394, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 위치\", \"is_finished\": false}"}
+{"t_ms": 15395, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 파\", \"is_finished\": false}"}
+{"t_ms": 15409, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"악\", \"is_finished\": false}"}
+{"t_ms": 15409, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 15429, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 필요\", \"is_finished\": false}"}
+{"t_ms": 15430, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 15434, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 15434, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 또한\", \"is_finished\": false}"}
+{"t_ms": 15462, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 15463, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 15475, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"생활\", \"is_finished\": false}"}
+{"t_ms": 15475, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 15506, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 15507, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 통\", \"is_finished\": false}"}
+{"t_ms": 15536, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"계\", \"is_finished\": false}"}
+{"t_ms": 15536, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"와\", \"is_finished\": false}"}
+{"t_ms": 15562, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 상\", \"is_finished\": false}"}
+{"t_ms": 15562, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 15568, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 정보\", \"is_finished\": false}"}
+{"t_ms": 15568, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 15573, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 15573, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 기반\", \"is_finished\": false}"}
+{"t_ms": 15578, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"으로\", \"is_finished\": false}"}
+{"t_ms": 15578, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 한\", \"is_finished\": false}"}
+{"t_ms": 15580, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 경제\", \"is_finished\": false}"}
+{"t_ms": 15580, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"적\", \"is_finished\": false}"}
+{"t_ms": 15592, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 15592, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"점\", \"is_finished\": false}"}
+{"t_ms": 15609, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 15610, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 15632, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 지역\", \"is_finished\": false}"}
+{"t_ms": 15632, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 15643, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 상\", \"is_finished\": false}"}
+{"t_ms": 15644, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"업\", \"is_finished\": false}"}
+{"t_ms": 15655, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 활동\", \"is_finished\": false}"}
+{"t_ms": 15655, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 15665, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 더욱\", \"is_finished\": false}"}
+{"t_ms": 15665, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 활\", \"is_finished\": false}"}
+{"t_ms": 15677, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"발\", \"is_finished\": false}"}
+{"t_ms": 15677, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"하게\", \"is_finished\": false}"}
+{"t_ms": 15711, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 할\", \"is_finished\": false}"}
+{"t_ms": 15712, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 15725, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 있는\", \"is_finished\": false}"}
+{"t_ms": 15725, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 기\", \"is_finished\": false}"}
+{"t_ms": 15732, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"회를\", \"is_finished\": false}"}
+{"t_ms": 15732, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 제공합니다\", \"is_finished\": false}"}
+{"t_ms": 15760, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 15761, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 15773, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 15773, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"로\", \"is_finished\": false}"}
+{"t_ms": 15786, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"휴\", \"is_finished\": false}"}
+{"t_ms": 15786, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 15836, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"통\", \"is_finished\": false}"}
+{"t_ms": 15836, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 15843, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"17\", \"is_finished\": false}"}
+{"t_ms": 15843, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 15845, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 15846, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 15856, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 있다는\", \"is_finished\": false}"}
+{"t_ms": 15857, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 것은\", \"is_finished\": false}"}
+{"t_ms": 15869, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 15869, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 15882, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 후\", \"is_finished\": false}"}
+{"t_ms": 15884, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 쓰\", \"is_finished\": false}"}
+{"t_ms": 15971, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"레\", \"is_finished\": false}"}
+{"t_ms": 15971, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"기\", \"is_finished\": false}"}
+{"t_ms": 16058, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 처\", \"is_finished\": false}"}
+{"t_ms": 16058, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"리가\", \"is_finished\": false}"}
+{"t_ms": 16077, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 용\", \"is_finished\": false}"}
+{"t_ms": 16077, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 16128, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"해\", \"is_finished\": false}"}
+{"t_ms": 16128, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 공\", \"is_finished\": false}"}
+{"t_ms": 16139, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"공\", \"is_finished\": false}"}
+{"t_ms": 16139, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 16144, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"과\", \"is_finished\": false}"}
+{"t_ms": 16145, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 환경\", \"is_finished\": false}"}
+{"t_ms": 16149, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 개선\", \"is_finished\": false}"}
+{"t_ms": 16149, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 16155, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 기\", \"is_finished\": false}"}
+{"t_ms": 16155, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"여\", \"is_finished\": false}"}
+{"t_ms": 16161, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 16161, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 것입니다\", \"is_finished\": false}"}
+{"t_ms": 16169, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 16169, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이러한\", \"is_finished\": false}"}
+{"t_ms": 16174, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 긍\", \"is_finished\": false}"}
+{"t_ms": 16174, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 16179, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"적\", \"is_finished\": false}"}
+{"t_ms": 16179, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 요\", \"is_finished\": false}"}
+{"t_ms": 16182, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 16183, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"들을\", \"is_finished\": false}"}
+{"t_ms": 16187, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 고려\", \"is_finished\": false}"}
+{"t_ms": 16187, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 16190, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 때\", \"is_finished\": false}"}
+{"t_ms": 16190, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 16193, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 16194, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"지는\", \"is_finished\": false}"}
+{"t_ms": 16196, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 여\", \"is_finished\": false}"}
+{"t_ms": 16196, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"전히\", \"is_finished\": false}"}
+{"t_ms": 16198, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 16198, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 16201, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 16202, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 16224, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 16224, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 16235, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 적\", \"is_finished\": false}"}
+{"t_ms": 16235, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"합\", \"is_finished\": false}"}
+{"t_ms": 16240, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"한\", \"is_finished\": false}"}
+{"t_ms": 16240, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 위치\", \"is_finished\": false}"}
+{"t_ms": 16259, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"라고\", \"is_finished\": false}"}
+{"t_ms": 16259, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 생각\", \"is_finished\": false}"}
+{"t_ms": 16268, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 16268, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 16296, "event": "message", "data": "{\"sender\": \"\", \"text\": \"\\n\\n\", \"is_finished\": false}"}
+{"t_ms": 16982, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 16982, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 17017, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 17017, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 17114, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 17114, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"와\", \"is_finished\": false}"}
+{"t_ms": 17118, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 17118, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 17122, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 17122, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 17128, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 사이\", \"is_finished\": false}"}
+{"t_ms": 17128, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 17148, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 거리\", \"is_finished\": false}"}
+{"t_ms": 17149, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 문제\", \"is_finished\": false}"}
+{"t_ms": 17160, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 17160, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 언\", \"is_finished\": false}"}
+{"t_ms": 17165, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"급\", \"is_finished\": false}"}
+{"t_ms": 17165, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 17169, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"셨\", \"is_finished\": false}"}
+{"t_ms": 17169, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"는데\", \"is_finished\": false}"}
+{"t_ms": 17188, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 17188, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 17201, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 17202, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 17238, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 17238, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 17242, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 17242, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 17251, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 17251, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 17295, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 17295, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 17298, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 17299, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"내\", \"is_finished\": false}"}
+{"t_ms": 17302, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 17302, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 17305, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 17305, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 17312, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"라는\", \"is_finished\": false}"}
+{"t_ms": 17312, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 조\", \"is_finished\": false}"}
+{"t_ms": 17322, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"례\", \"is_finished\": false}"}
+{"t_ms": 17322, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 17333, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 따르면\", \"is_finished\": false}"}
+{"t_ms": 17333, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 17367, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 17368, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 17379, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에서는\", \"is_finished\": false}"}
+{"t_ms": 17380, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 17389, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 17390, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 불\", \"is_finished\": false}"}
+{"t_ms": 17400, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가능\", \"is_finished\": false}"}
+{"t_ms": 17400, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 17415, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 17415, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 또한\", \"is_finished\": false}"}
+{"t_ms": 17440, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 17441, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 17447, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"금\", \"is_finished\": false}"}
+{"t_ms": 17448, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 17464, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 17464, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 17481, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 17482, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 17500, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 17500, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 17513, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"300\", \"is_finished\": false}"}
+{"t_ms": 17513, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 17530, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 안\", \"is_finished\": false}"}
+{"t_ms": 17531, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 17543, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 17543, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"3\", \"is_finished\": false}"}
+{"t_ms": 17556, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 17556, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 17573, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 존재\", \"is_finished\": false}"}
+{"t_ms": 17574, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하여\", \"is_finished\": false}"}
+{"t_ms": 17582, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 건강\", \"is_finished\": false}"}
+{"t_ms": 17582, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"권\", \"is_finished\": false}"}
+{"t_ms": 17597, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 17597, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 심\", \"is_finished\": false}"}
+{"t_ms": 17613, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"각\", \"is_finished\": false}"}
+{"t_ms": 17614, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"한\", \"is_finished\": false}"}
+{"t_ms": 17633, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 영향을\", \"is_finished\": false}"}
+{"t_ms": 17633, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 미\", \"is_finished\": false}"}
+{"t_ms": 17652, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"칠\", \"is_finished\": false}"}
+{"t_ms": 17652, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 17662, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 있습니다\", \"is_finished\": false}"}
+{"t_ms": 17663, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 17673, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 유\", \"is_finished\": false}"}
+{"t_ms": 17673, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"동\", \"is_finished\": false}"}
+{"t_ms": 17718, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 17719, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 17730, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 17730, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 많\", \"is_finished\": false}"}
+{"t_ms": 17738, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"다는\", \"is_finished\": false}"}
+{"t_ms": 17739, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 것은\", \"is_finished\": false}"}
+{"t_ms": 17743, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 오\", \"is_finished\": false}"}
+{"t_ms": 17743, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"히\", \"is_finished\": false}"}
+{"t_ms": 17765, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"려\", \"is_finished\": false}"}
+{"t_ms": 17765, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 보\", \"is_finished\": false}"}
+{"t_ms": 17812, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"행\", \"is_finished\": false}"}
+{"t_ms": 17813, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"자의\", \"is_finished\": false}"}
+{"t_ms": 17817, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 17818, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"과\", \"is_finished\": false}"}
+{"t_ms": 17826, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 편\", \"is_finished\": false}"}
+{"t_ms": 17827, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 17831, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"성을\", \"is_finished\": false}"}
+{"t_ms": 17832, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 해\", \"is_finished\": false}"}
+{"t_ms": 17849, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"칠\", \"is_finished\": false}"}
+{"t_ms": 17849, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 17865, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 있는\", \"is_finished\": false}"}
+{"t_ms": 17865, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 요소\", \"is_finished\": false}"}
+{"t_ms": 17876, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 17876, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"므로\", \"is_finished\": false}"}
+{"t_ms": 17889, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 17890, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 17908, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 17909, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"지는\", \"is_finished\": false}"}
+{"t_ms": 17922, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 부\", \"is_finished\": false}"}
+{"t_ms": 17922, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"적\", \"is_finished\": false}"}
+{"t_ms": 17934, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"합\", \"is_finished\": false}"}
+{"t_ms": 17934, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 17938, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"다고\", \"is_finished\": false}"}
+{"t_ms": 17938, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 생각\", \"is_finished\": false}"}
+{"t_ms": 17949, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 17949, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 17990, "event": "message", "data": "{\"sender\": \"\", \"text\": \"\\n\\n\", \"is_finished\": false}"}
+{"t_ms": 20099, "event": "message", "data": "{\"sender\": \"시스템\", \"text\": \"💡 [라운드 2 분석] 찬성측 수용도: 70.0%, 반대측 수용도: 50.0%\\n👉 (현재 CSS) 찬성: LOW / 반대: MEDIUM\\n📝 사유: 찬성 측이 '흡연부스 설치는 금연구역에서 10m 이상 떨어진 곳에 가능'하다는 점을 강조하며 조건부 수용 가능성을 내비쳤고, 구체적인 데이터(가로휴지통 17개)를 재차 언급하여 긍정적인 요소를 강화하여 0.65→0.70으로 상향. 반대 측은 기존 주장(조례에 따른 설치 금지, 건강권 문제)을 반복하며 새로운 근거를 제시하지 않아 0.55에서 0.50으로 하향.\\n\\n\", \"is_finished\": false, \"metrics\": {\"pro_acc\": 0.7, \"con_acc\": 0.5, \"css_pro\": \"LOW\", \"css_con\": \"MEDIUM\", \"eval_error\": null}}"}
+{"t_ms": 20639, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 20640, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 20657, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 20657, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 20668, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 20668, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 20755, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 20755, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 20769, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 20770, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 20776, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 20776, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 20793, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"내\", \"is_finished\": false}"}
+{"t_ms": 20794, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 20795, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 위치\", \"is_finished\": false}"}
+{"t_ms": 20795, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"해\", \"is_finished\": false}"}
+{"t_ms": 20799, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 있다는\", \"is_finished\": false}"}
+{"t_ms": 20799, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 점\", \"is_finished\": false}"}
+{"t_ms": 20801, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 20801, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 인정\", \"is_finished\": false}"}
+{"t_ms": 20803, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 20803, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"만\", \"is_finished\": false}"}
+{"t_ms": 20821, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 20821, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 20839, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"흡\", \"is_finished\": false}"}
+{"t_ms": 20839, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 20855, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 20855, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 20870, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 20870, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"는\", \"is_finished\": false}"}
+{"t_ms": 20914, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 20915, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 20916, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 20916, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 20922, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에서\", \"is_finished\": false}"}
+{"t_ms": 20923, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 20935, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 20936, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 20938, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이상\", \"is_finished\": false}"}
+{"t_ms": 20939, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 떨어\", \"is_finished\": false}"}
+{"t_ms": 20948, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"진\", \"is_finished\": false}"}
+{"t_ms": 20948, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 곳\", \"is_finished\": false}"}
+{"t_ms": 20960, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 20961, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 가능\", \"is_finished\": false}"}
+{"t_ms": 20990, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 20990, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 20998, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"다는\", \"is_finished\": false}"}
+{"t_ms": 20999, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 점\", \"is_finished\": false}"}
+{"t_ms": 21009, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 21009, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 강조\", \"is_finished\": false}"}
+{"t_ms": 21021, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"하고\", \"is_finished\": false}"}
+{"t_ms": 21021, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 싶\", \"is_finished\": false}"}
+{"t_ms": 21027, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"습니다\", \"is_finished\": false}"}
+{"t_ms": 21027, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 21045, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 또한\", \"is_finished\": false}"}
+{"t_ms": 21046, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 21060, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 21061, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 21076, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"로\", \"is_finished\": false}"}
+{"t_ms": 21077, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"휴\", \"is_finished\": false}"}
+{"t_ms": 21091, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 21091, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"통\", \"is_finished\": false}"}
+{"t_ms": 21104, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 21104, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 21130, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"17\", \"is_finished\": false}"}
+{"t_ms": 21130, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 21148, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 21148, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 존재\", \"is_finished\": false}"}
+{"t_ms": 21186, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"한다\", \"is_finished\": false}"}
+{"t_ms": 21186, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"는\", \"is_finished\": false}"}
+{"t_ms": 21187, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 것은\", \"is_finished\": false}"}
+{"t_ms": 21201, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 21201, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 21213, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 후\", \"is_finished\": false}"}
+{"t_ms": 21214, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 쓰\", \"is_finished\": false}"}
+{"t_ms": 21229, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"레\", \"is_finished\": false}"}
+{"t_ms": 21229, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"기\", \"is_finished\": false}"}
+{"t_ms": 21242, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 처\", \"is_finished\": false}"}
+{"t_ms": 21242, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"리를\", \"is_finished\": false}"}
+{"t_ms": 21255, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 용\", \"is_finished\": false}"}
+{"t_ms": 21255, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 21272, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"하게\", \"is_finished\": false}"}
+{"t_ms": 21273, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 하\", \"is_finished\": false}"}
+{"t_ms": 21289, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"여\", \"is_finished\": false}"}
+{"t_ms": 21289, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 공\", \"is_finished\": false}"}
+{"t_ms": 21301, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"공\", \"is_finished\": false}"}
+{"t_ms": 21301, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 21324, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 21324, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 증\", \"is_finished\": false}"}
+{"t_ms": 21343, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"진\", \"is_finished\": false}"}
+{"t_ms": 21344, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"시\", \"is_finished\": false}"}
+{"t_ms": 21371, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"킬\", \"is_finished\": false}"}
+{"t_ms": 21371, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 21384, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 있는\", \"is_finished\": false}"}
+{"t_ms": 21384, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 긍\", \"is_finished\": false}"}
+{"t_ms": 21398, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 21398, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"적\", \"is_finished\": false}"}
+{"t_ms": 21411, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 요\", \"is_finished\": false}"}
+{"t_ms": 21411, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 21426, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"입니다\", \"is_finished\": false}"}
+{"t_ms": 21426, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 21452, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 21453, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 지역\", \"is_finished\": false}"}
+{"t_ms": 21455, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 21455, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 21470, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"상\", \"is_finished\": false}"}
+{"t_ms": 21470, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"업\", \"is_finished\": false}"}
+{"t_ms": 21483, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 활동\", \"is_finished\": false}"}
+{"t_ms": 21484, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 21496, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 활성\", \"is_finished\": false}"}
+{"t_ms": 21496, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"화\", \"is_finished\": false}"}
+{"t_ms": 21506, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"와\", \"is_finished\": false}"}
+{"t_ms": 21506, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 21528, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"생활\", \"is_finished\": false}"}
+{"t_ms": 21528, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 21542, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 21542, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 통\", \"is_finished\": false}"}
+{"t_ms": 21557, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"계\", \"is_finished\": false}"}
+{"t_ms": 21557, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 21568, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 21568, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 고려\", \"is_finished\": false}"}
+{"t_ms": 21590, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 21590, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 때\", \"is_finished\": false}"}
+{"t_ms": 21602, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 21603, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 21623, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 21623, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 21637, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 21638, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 21654, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"는\", \"is_finished\": false}"}
+{"t_ms": 21654, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 여\", \"is_finished\": false}"}
+{"t_ms": 21669, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"전히\", \"is_finished\": false}"}
+{"t_ms": 21669, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 적\", \"is_finished\": false}"}
+{"t_ms": 21680, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"합\", \"is_finished\": false}"}
+{"t_ms": 21680, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"한\", \"is_finished\": false}"}
+{"t_ms": 21691, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 선택\", \"is_finished\": false}"}
+{"t_ms": 21692, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"이라고\", \"is_finished\": false}"}
+{"t_ms": 21723, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 생각\", \"is_finished\": false}"}
+{"t_ms": 21723, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 21749, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 21751, "event": "message", "data": "{\"sender\": \"\", \"text\": \"\\n\\n\", \"is_finished\": false}"}
+{"t_ms": 22554, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 22554, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 22555, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 22555, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 22556, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 22556, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 22633, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 22634, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 22678, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 22679, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 22682, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 22682, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 22697, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"내\", \"is_finished\": false}"}
+{"t_ms": 22698, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 22707, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 위치\", \"is_finished\": false}"}
+{"t_ms": 22708, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"해\", \"is_finished\": false}"}
+{"t_ms": 22712, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 있다는\", \"is_finished\": false}"}
+{"t_ms": 22712, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 점\", \"is_finished\": false}"}
+{"t_ms": 22714, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 22715, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 22717, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"조\", \"is_finished\": false}"}
+{"t_ms": 22717, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"례\", \"is_finished\": false}"}
+{"t_ms": 22727, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 22727, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 따라\", \"is_finished\": false}"}
+{"t_ms": 22727, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 22728, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 22729, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 22729, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 22806, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에서\", \"is_finished\": false}"}
+{"t_ms": 22807, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 22810, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 22810, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 22826, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 22826, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"내\", \"is_finished\": false}"}
+{"t_ms": 22827, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 22827, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 22881, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 22882, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 22882, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"되\", \"is_finished\": false}"}
+{"t_ms": 22882, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"므로\", \"is_finished\": false}"}
+{"t_ms": 22924, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 22925, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 22925, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 22926, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 22926, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 22926, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 22970, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 22970, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 불\", \"is_finished\": false}"}
+{"t_ms": 22971, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가능\", \"is_finished\": false}"}
+{"t_ms": 22971, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 22973, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 22974, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 또한\", \"is_finished\": false}"}
+{"t_ms": 22974, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 22975, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 22989, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"금\", \"is_finished\": false}"}
+{"t_ms": 22989, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 22990, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 22990, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 23003, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 23004, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 23004, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 23004, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 23005, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"300\", \"is_finished\": false}"}
+{"t_ms": 23005, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 23012, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 안\", \"is_finished\": false}"}
+{"t_ms": 23012, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 23034, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 23034, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"3\", \"is_finished\": false}"}
+{"t_ms": 23054, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 23054, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 23071, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 존재\", \"is_finished\": false}"}
+{"t_ms": 23072, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하여\", \"is_finished\": false}"}
+{"t_ms": 23097, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 23097, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 지역\", \"is_finished\": false}"}
+{"t_ms": 23098, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 23099, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 건강\", \"is_finished\": false}"}
+{"t_ms": 23125, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"권\", \"is_finished\": false}"}
+{"t_ms": 23126, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 23147, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 심\", \"is_finished\": false}"}
+{"t_ms": 23147, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"각\", \"is_finished\": false}"}
+{"t_ms": 23175, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하게\", \"is_finished\": false}"}
+{"t_ms": 23175, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 위\", \"is_finished\": false}"}
+{"t_ms": 23197, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"협\", \"is_finished\": false}"}
+{"t_ms": 23197, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 23261, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 23261, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 있습니다\", \"is_finished\": false}"}
+{"t_ms": 23263, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 23263, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 유\", \"is_finished\": false}"}
+{"t_ms": 23275, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"동\", \"is_finished\": false}"}
+{"t_ms": 23275, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 23292, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 23292, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 23302, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 많\", \"is_finished\": false}"}
+{"t_ms": 23302, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"아\", \"is_finished\": false}"}
+{"t_ms": 23321, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"지는\", \"is_finished\": false}"}
+{"t_ms": 23321, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 것은\", \"is_finished\": false}"}
+{"t_ms": 23346, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 보\", \"is_finished\": false}"}
+{"t_ms": 23346, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"행\", \"is_finished\": false}"}
+{"t_ms": 23389, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"자의\", \"is_finished\": false}"}
+{"t_ms": 23389, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 23410, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"과\", \"is_finished\": false}"}
+{"t_ms": 23411, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 편\", \"is_finished\": false}"}
+{"t_ms": 23420, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 23420, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"성을\", \"is_finished\": false}"}
+{"t_ms": 23430, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 해\", \"is_finished\": false}"}
+{"t_ms": 23430, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"칠\", \"is_finished\": false}"}
+{"t_ms": 23435, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 23435, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 있는\", \"is_finished\": false}"}
+{"t_ms": 23444, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 요소\", \"is_finished\": false}"}
+{"t_ms": 23444, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 23457, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"므로\", \"is_finished\": false}"}
+{"t_ms": 23458, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 23468, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 23468, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 23480, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"지는\", \"is_finished\": false}"}
+{"t_ms": 23480, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 부\", \"is_finished\": false}"}
+{"t_ms": 23491, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"적\", \"is_finished\": false}"}
+{"t_ms": 23491, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"합\", \"is_finished\": false}"}
+{"t_ms": 23503, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 23504, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 23533, "event": "message", "data": "{\"sender\": \"\", \"text\": \"\\n\\n\", \"is_finished\": false}"}
+{"t_ms": 25308, "event": "message", "data": "{\"sender\": \"시스템\", \"text\": \"💡 [라운드 3 분석] 찬성측 수용도: 75.0%, 반대측 수용도: 45.0%\\n👉 (현재 CSS) 찬성: LOW / 반대: MEDIUM\\n📝 사유: 찬성 측이 '흡연부스 설치는 금연구역에서 10m 이상 떨어진 곳에 가능'하다는 점을 강조하며 조건부 수용 가능성을 내비쳤고, 구체적인 데이터(가로휴지통 17개)를 재차 언급하여 긍정적인 요소를 강화하여 0.70→0.75로 상향. 반대 측은 기존 주장(조례에 따른 설치 금지, 건강권 문제)을 반복하며 새로운 근거를 제시하지 않아 0.50에서 0.45로 하향.\\n\\n\", \"is_finished\": false, \"metrics\": {\"pro_acc\": 0.75, \"con_acc\": 0.45, \"css_pro\": \"LOW\", \"css_con\": \"MEDIUM\", \"eval_error\": null}}"}
+{"t_ms": 25914, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"현재\", \"is_finished\": false}"}
+{"t_ms": 25914, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 25927, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 25927, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 25989, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 대한\", \"is_finished\": false}"}
+{"t_ms": 25989, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 찬\", \"is_finished\": false}"}
+{"t_ms": 25992, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"반\", \"is_finished\": false}"}
+{"t_ms": 25993, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 의견\", \"is_finished\": false}"}
+{"t_ms": 25995, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 25995, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 명\", \"is_finished\": false}"}
+{"t_ms": 26051, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"확\", \"is_finished\": false}"}
+{"t_ms": 26051, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"히\", \"is_finished\": false}"}
+{"t_ms": 26052, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 나\", \"is_finished\": false}"}
+{"t_ms": 26052, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"뉘\", \"is_finished\": false}"}
+{"t_ms": 26070, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"고\", \"is_finished\": false}"}
+{"t_ms": 26071, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 있습니다\", \"is_finished\": false}"}
+{"t_ms": 26079, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 26079, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 찬\", \"is_finished\": false}"}
+{"t_ms": 26081, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"성\", \"is_finished\": false}"}
+{"t_ms": 26081, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 측\", \"is_finished\": false}"}
+{"t_ms": 26086, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 26086, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 26131, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"흡\", \"is_finished\": false}"}
+{"t_ms": 26132, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 26132, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 26133, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 26143, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 26144, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 26155, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 26155, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 26156, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 26157, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 26173, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"에서\", \"is_finished\": false}"}
+{"t_ms": 26173, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 26174, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 26174, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 26200, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 이상\", \"is_finished\": false}"}
+{"t_ms": 26201, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 떨어\", \"is_finished\": false}"}
+{"t_ms": 26210, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"진\", \"is_finished\": false}"}
+{"t_ms": 26210, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 곳\", \"is_finished\": false}"}
+{"t_ms": 26213, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 26213, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 가능\", \"is_finished\": false}"}
+{"t_ms": 26217, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 26217, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 26218, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"다는\", \"is_finished\": false}"}
+{"t_ms": 26219, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 점\", \"is_finished\": false}"}
+{"t_ms": 26222, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 26223, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 강조\", \"is_finished\": false}"}
+{"t_ms": 26238, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하며\", \"is_finished\": false}"}
+{"t_ms": 26238, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 26253, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 26254, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 26273, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"로\", \"is_finished\": false}"}
+{"t_ms": 26273, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"휴\", \"is_finished\": false}"}
+{"t_ms": 26296, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 26296, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"통\", \"is_finished\": false}"}
+{"t_ms": 26306, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 26307, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"17\", \"is_finished\": false}"}
+{"t_ms": 26317, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 26317, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 26331, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 26331, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 존재\", \"is_finished\": false}"}
+{"t_ms": 26339, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하는\", \"is_finished\": false}"}
+{"t_ms": 26339, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 것이\", \"is_finished\": false}"}
+{"t_ms": 26357, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 공\", \"is_finished\": false}"}
+{"t_ms": 26358, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"공\", \"is_finished\": false}"}
+{"t_ms": 26370, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 26370, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 26384, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 증\", \"is_finished\": false}"}
+{"t_ms": 26384, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"진\", \"is_finished\": false}"}
+{"t_ms": 26398, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 26399, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 26410, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 있다고\", \"is_finished\": false}"}
+{"t_ms": 26410, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 주장\", \"is_finished\": false}"}
+{"t_ms": 26423, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하고\", \"is_finished\": false}"}
+{"t_ms": 26423, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 있습니다\", \"is_finished\": false}"}
+{"t_ms": 26439, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 26440, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 26454, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"면\", \"is_finished\": false}"}
+{"t_ms": 26454, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 26465, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 26465, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"대\", \"is_finished\": false}"}
+{"t_ms": 26476, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 측\", \"is_finished\": false}"}
+{"t_ms": 26477, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 26488, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 26489, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 26511, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 26511, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 26521, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 26521, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 26532, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 26533, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 26543, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 26543, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 26559, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 26559, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 26568, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"내\", \"is_finished\": false}"}
+{"t_ms": 26568, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 26579, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 26579, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 26597, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 26597, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"라는\", \"is_finished\": false}"}
+{"t_ms": 26613, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 조\", \"is_finished\": false}"}
+{"t_ms": 26613, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"례\", \"is_finished\": false}"}
+{"t_ms": 26623, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 26623, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 따라\", \"is_finished\": false}"}
+{"t_ms": 26636, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 26636, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 26650, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 불\", \"is_finished\": false}"}
+{"t_ms": 26650, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"가능\", \"is_finished\": false}"}
+{"t_ms": 26662, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 26662, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"다고\", \"is_finished\": false}"}
+{"t_ms": 26667, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 지\", \"is_finished\": false}"}
+{"t_ms": 26668, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"적\", \"is_finished\": false}"}
+{"t_ms": 26683, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하며\", \"is_finished\": false}"}
+{"t_ms": 26684, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 26697, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 26697, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"금\", \"is_finished\": false}"}
+{"t_ms": 26716, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 26717, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 26721, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 26722, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 26728, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 26729, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 26740, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 26740, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"300\", \"is_finished\": false}"}
+{"t_ms": 26750, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 26750, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 안\", \"is_finished\": false}"}
+{"t_ms": 26762, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 26762, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 26773, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"3\", \"is_finished\": false}"}
+{"t_ms": 26773, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 26785, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 26785, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 존재\", \"is_finished\": false}"}
+{"t_ms": 26794, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하여\", \"is_finished\": false}"}
+{"t_ms": 26795, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 건강\", \"is_finished\": false}"}
+{"t_ms": 26812, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"권\", \"is_finished\": false}"}
+{"t_ms": 26813, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 26825, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 위\", \"is_finished\": false}"}
+{"t_ms": 26825, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"협\", \"is_finished\": false}"}
+{"t_ms": 26836, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 26836, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 26848, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 있다고\", \"is_finished\": false}"}
+{"t_ms": 26848, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 우\", \"is_finished\": false}"}
+{"t_ms": 26866, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"려\", \"is_finished\": false}"}
+{"t_ms": 26866, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하고\", \"is_finished\": false}"}
+{"t_ms": 26877, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 있습니다\", \"is_finished\": false}"}
+{"t_ms": 26877, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \".\\n\\n\", \"is_finished\": false}"}
+{"t_ms": 26886, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 26887, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"러한\", \"is_finished\": false}"}
+{"t_ms": 26899, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 상황\", \"is_finished\": false}"}
+{"t_ms": 26899, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 26910, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 고려\", \"is_finished\": false}"}
+{"t_ms": 26911, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 26921, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 때\", \"is_finished\": false}"}
+{"t_ms": 26922, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 26934, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 저는\", \"is_finished\": false}"}
+{"t_ms": 26934, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 26945, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 26945, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 26959, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 정확\", \"is_finished\": false}"}
+{"t_ms": 26960, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"한\", \"is_finished\": false}"}
+{"t_ms": 26975, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 위치\", \"is_finished\": false}"}
+{"t_ms": 26975, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 26986, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 재\", \"is_finished\": false}"}
+{"t_ms": 26986, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"조\", \"is_finished\": false}"}
+{"t_ms": 26996, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"사\", \"is_finished\": false}"}
+{"t_ms": 26996, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하여\", \"is_finished\": false}"}
+{"t_ms": 27009, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 27010, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 27021, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 27022, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 27032, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 27033, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 27057, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"와\", \"is_finished\": false}"}
+{"t_ms": 27057, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 27059, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 거리\", \"is_finished\": false}"}
+{"t_ms": 27059, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 27071, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 27071, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 명\", \"is_finished\": false}"}
+{"t_ms": 27078, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"확\", \"is_finished\": false}"}
+{"t_ms": 27079, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"히\", \"is_finished\": false}"}
+{"t_ms": 27093, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 파\", \"is_finished\": false}"}
+{"t_ms": 27093, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"악\", \"is_finished\": false}"}
+{"t_ms": 27106, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하고\", \"is_finished\": false}"}
+{"t_ms": 27106, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 27117, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 이를\", \"is_finished\": false}"}
+{"t_ms": 27117, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 기반\", \"is_finished\": false}"}
+{"t_ms": 27128, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"으로\", \"is_finished\": false}"}
+{"t_ms": 27128, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 27145, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"흡\", \"is_finished\": false}"}
+{"t_ms": 27145, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 27157, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 27158, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 27170, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 27170, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 가능\", \"is_finished\": false}"}
+{"t_ms": 27182, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 여부\", \"is_finished\": false}"}
+{"t_ms": 27182, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 27192, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 27192, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 다시\", \"is_finished\": false}"}
+{"t_ms": 27206, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 검\", \"is_finished\": false}"}
+{"t_ms": 27206, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"토\", \"is_finished\": false}"}
+{"t_ms": 27222, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하는\", \"is_finished\": false}"}
+{"t_ms": 27222, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 것이\", \"is_finished\": false}"}
+{"t_ms": 27233, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 필요\", \"is_finished\": false}"}
+{"t_ms": 27233, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 27244, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"다고\", \"is_finished\": false}"}
+{"t_ms": 27244, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 생각\", \"is_finished\": false}"}
+{"t_ms": 27250, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 27250, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 27270, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 또한\", \"is_finished\": false}"}
+{"t_ms": 27270, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 27277, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 27278, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"유\", \"is_finished\": false}"}
+{"t_ms": 27301, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"동\", \"is_finished\": false}"}
+{"t_ms": 27301, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 27314, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 27314, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 27323, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 편\", \"is_finished\": false}"}
+{"t_ms": 27324, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 27344, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"성과\", \"is_finished\": false}"}
+{"t_ms": 27344, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 27351, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 27352, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 27365, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 동시에\", \"is_finished\": false}"}
+{"t_ms": 27366, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 고려\", \"is_finished\": false}"}
+{"t_ms": 27379, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 27380, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 27394, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 있는\", \"is_finished\": false}"}
+{"t_ms": 27395, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 대\", \"is_finished\": false}"}
+{"t_ms": 27405, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"안을\", \"is_finished\": false}"}
+{"t_ms": 27406, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 마련\", \"is_finished\": false}"}
+{"t_ms": 27427, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하여\", \"is_finished\": false}"}
+{"t_ms": 27427, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 27452, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 지역\", \"is_finished\": false}"}
+{"t_ms": 27452, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 주민\", \"is_finished\": false}"}
+{"t_ms": 27464, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"들의\", \"is_finished\": false}"}
+{"t_ms": 27464, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 건강\", \"is_finished\": false}"}
+{"t_ms": 27475, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"과\", \"is_finished\": false}"}
+{"t_ms": 27476, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 27485, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 27485, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 우\", \"is_finished\": false}"}
+{"t_ms": 27497, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"선\", \"is_finished\": false}"}
+{"t_ms": 27497, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"시\", \"is_finished\": false}"}
+{"t_ms": 27507, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하는\", \"is_finished\": false}"}
+{"t_ms": 27508, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 방향\", \"is_finished\": false}"}
+{"t_ms": 27522, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"으로\", \"is_finished\": false}"}
+{"t_ms": 27522, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 나\", \"is_finished\": false}"}
+{"t_ms": 27538, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"아\", \"is_finished\": false}"}
+{"t_ms": 27538, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 27545, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"야\", \"is_finished\": false}"}
+{"t_ms": 27545, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 할\", \"is_finished\": false}"}
+{"t_ms": 27551, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 것입니다\", \"is_finished\": false}"}
+{"t_ms": 27552, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 27580, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 이러한\", \"is_finished\": false}"}
+{"t_ms": 27580, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 조건\", \"is_finished\": false}"}
+{"t_ms": 27596, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 27596, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 충\", \"is_finished\": false}"}
+{"t_ms": 27619, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"족\", \"is_finished\": false}"}
+{"t_ms": 27619, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 27664, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 27665, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 있다\", \"is_finished\": false}"}
+{"t_ms": 27677, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"면\", \"is_finished\": false}"}
+{"t_ms": 27678, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 27679, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 27680, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 27682, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 27683, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 27693, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 27694, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 27695, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 긍\", \"is_finished\": false}"}
+{"t_ms": 27696, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 27700, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"적으로\", \"is_finished\": false}"}
+{"t_ms": 27701, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 검\", \"is_finished\": false}"}
+{"t_ms": 27714, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"토\", \"is_finished\": false}"}
+{"t_ms": 27715, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 27719, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 27719, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 있을\", \"is_finished\": false}"}
+{"t_ms": 27728, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 것입니다\", \"is_finished\": false}"}
+{"t_ms": 27728, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 27761, "event": "message", "data": "{\"sender\": \"\", \"text\": \"\\n\\n\", \"is_finished\": false}"}
+{"t_ms": 28732, "event": null, "data": null, "comment": "ping - 2026-10-12 10:51:35.282769+00:00"}
+{"t_ms": 28828, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"후\", \"is_finished\": false}"}
+{"t_ms": 28828, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"보\", \"is_finished\": false}"}
+{"t_ms": 28842, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 28843, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 28851, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 28851, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 28865, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 28866, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 28887, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 28888, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 28933, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"와\", \"is_finished\": false}"}
+{"t_ms": 28934, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 28980, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 거리\", \"is_finished\": false}"}
+{"t_ms": 28981, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 28989, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 28989, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 재\", \"is_finished\": false}"}
+{"t_ms": 28991, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"조\", \"is_finished\": false}"}
+{"t_ms": 28992, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"사\", \"is_finished\": false}"}
+{"t_ms": 28992, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"하는\", \"is_finished\": false}"}
+{"t_ms": 28993, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 것은\", \"is_finished\": false}"}
+{"t_ms": 28994, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 매우\", \"is_finished\": false}"}
+{"t_ms": 28994, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 중요한\", \"is_finished\": false}"}
+{"t_ms": 29005, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 접근\", \"is_finished\": false}"}
+{"t_ms": 29005, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"입니다\", \"is_finished\": false}"}
+{"t_ms": 29014, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 29014, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 하지만\", \"is_finished\": false}"}
+{"t_ms": 29026, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 29026, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"흡\", \"is_finished\": false}"}
+{"t_ms": 29044, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 29045, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 29069, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 29070, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 29097, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"는\", \"is_finished\": false}"}
+{"t_ms": 29097, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 29108, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 29108, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 29126, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 29126, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에서\", \"is_finished\": false}"}
+{"t_ms": 29142, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 29142, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 29155, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 29155, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이상\", \"is_finished\": false}"}
+{"t_ms": 29165, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 떨어\", \"is_finished\": false}"}
+{"t_ms": 29165, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"진\", \"is_finished\": false}"}
+{"t_ms": 29176, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 곳\", \"is_finished\": false}"}
+{"t_ms": 29177, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 29190, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 가능\", \"is_finished\": false}"}
+{"t_ms": 29190, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 29207, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 29207, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"다는\", \"is_finished\": false}"}
+{"t_ms": 29223, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 점\", \"is_finished\": false}"}
+{"t_ms": 29224, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 29236, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 여\", \"is_finished\": false}"}
+{"t_ms": 29237, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"전히\", \"is_finished\": false}"}
+{"t_ms": 29252, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 유\", \"is_finished\": false}"}
+{"t_ms": 29252, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"효\", \"is_finished\": false}"}
+{"t_ms": 29259, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 29260, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 29273, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 또한\", \"is_finished\": false}"}
+{"t_ms": 29273, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 29290, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 29290, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 29305, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"로\", \"is_finished\": false}"}
+{"t_ms": 29305, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"휴\", \"is_finished\": false}"}
+{"t_ms": 29321, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 29321, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"통\", \"is_finished\": false}"}
+{"t_ms": 29332, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 29333, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"17\", \"is_finished\": false}"}
+{"t_ms": 29338, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 29339, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 29361, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 29361, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 있어\", \"is_finished\": false}"}
+{"t_ms": 29373, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 29373, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 29384, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 후\", \"is_finished\": false}"}
+{"t_ms": 29384, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 쓰\", \"is_finished\": false}"}
+{"t_ms": 29399, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"레\", \"is_finished\": false}"}
+{"t_ms": 29399, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"기\", \"is_finished\": false}"}
+{"t_ms": 29411, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 처\", \"is_finished\": false}"}
+{"t_ms": 29411, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"리가\", \"is_finished\": false}"}
+{"t_ms": 29424, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 용\", \"is_finished\": false}"}
+{"t_ms": 29424, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 29435, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 29435, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"다는\", \"is_finished\": false}"}
+{"t_ms": 29450, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 점\", \"is_finished\": false}"}
+{"t_ms": 29450, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 29461, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 지역\", \"is_finished\": false}"}
+{"t_ms": 29461, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 29476, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 공\", \"is_finished\": false}"}
+{"t_ms": 29476, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"공\", \"is_finished\": false}"}
+{"t_ms": 29487, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 29488, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 29502, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 더욱\", \"is_finished\": false}"}
+{"t_ms": 29503, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 증\", \"is_finished\": false}"}
+{"t_ms": 29516, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"진\", \"is_finished\": false}"}
+{"t_ms": 29516, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"시키\", \"is_finished\": false}"}
+{"t_ms": 29531, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"는\", \"is_finished\": false}"}
+{"t_ms": 29531, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 요소\", \"is_finished\": false}"}
+{"t_ms": 29544, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"입니다\", \"is_finished\": false}"}
+{"t_ms": 29545, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 29558, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 29558, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"와\", \"is_finished\": false}"}
+{"t_ms": 29571, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 함께\", \"is_finished\": false}"}
+{"t_ms": 29572, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 29581, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 29582, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"상\", \"is_finished\": false}"}
+{"t_ms": 29632, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"업\", \"is_finished\": false}"}
+{"t_ms": 29632, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 활동\", \"is_finished\": false}"}
+{"t_ms": 29687, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 활성\", \"is_finished\": false}"}
+{"t_ms": 29687, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"화\", \"is_finished\": false}"}
+{"t_ms": 29783, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 29784, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"와\", \"is_finished\": false}"}
+{"t_ms": 29784, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 29785, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"생활\", \"is_finished\": false}"}
+{"t_ms": 29786, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 29786, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 29787, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 통\", \"is_finished\": false}"}
+{"t_ms": 29787, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"계\", \"is_finished\": false}"}
+{"t_ms": 29790, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 29790, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 29792, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 고려\", \"is_finished\": false}"}
+{"t_ms": 29793, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 29803, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 때\", \"is_finished\": false}"}
+{"t_ms": 29803, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 29824, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 29824, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 29843, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"지는\", \"is_finished\": false}"}
+{"t_ms": 29844, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 29846, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 29846, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 29858, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 29859, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 29870, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 29870, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 적\", \"is_finished\": false}"}
+{"t_ms": 29894, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"합\", \"is_finished\": false}"}
+{"t_ms": 29894, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 29896, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"다고\", \"is_finished\": false}"}
+{"t_ms": 29896, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \" 믿\", \"is_finished\": false}"}
+{"t_ms": 29907, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \"습니다\", \"is_finished\": false}"}
+{"t_ms": 29907, "event": "message", "data": "{\"sender\": \"찬성\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 29946, "event": "message", "data": "{\"sender\": \"\", \"text\": \"\\n\\n\", \"is_finished\": false}"}
+{"t_ms": 30583, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 30584, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 30595, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 30596, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 30607, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 30607, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"와\", \"is_finished\": false}"}
+{"t_ms": 30668, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 30668, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 거리\", \"is_finished\": false}"}
+{"t_ms": 30715, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 문제\", \"is_finished\": false}"}
+{"t_ms": 30715, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"는\", \"is_finished\": false}"}
+{"t_ms": 30721, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 30721, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"조\", \"is_finished\": false}"}
+{"t_ms": 30735, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"례\", \"is_finished\": false}"}
+{"t_ms": 30735, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 30737, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 따라\", \"is_finished\": false}"}
+{"t_ms": 30737, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 30750, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 30750, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 30753, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 30753, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에서\", \"is_finished\": false}"}
+{"t_ms": 30755, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 30755, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 30756, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 30757, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 30775, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"내\", \"is_finished\": false}"}
+{"t_ms": 30776, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 30788, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 30788, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 30821, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 30821, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"되\", \"is_finished\": false}"}
+{"t_ms": 30830, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"므로\", \"is_finished\": false}"}
+{"t_ms": 30830, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 여\", \"is_finished\": false}"}
+{"t_ms": 30837, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"전히\", \"is_finished\": false}"}
+{"t_ms": 30837, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 30880, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 30882, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 불\", \"is_finished\": false}"}
+{"t_ms": 30883, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가능\", \"is_finished\": false}"}
+{"t_ms": 30884, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 30885, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 30886, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 또한\", \"is_finished\": false}"}
+{"t_ms": 30907, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 30908, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 30925, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"금\", \"is_finished\": false}"}
+{"t_ms": 30925, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 30936, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 30937, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 30950, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 30951, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 30959, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 30959, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 30984, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"300\", \"is_finished\": false}"}
+{"t_ms": 30985, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 30987, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 안\", \"is_finished\": false}"}
+{"t_ms": 30987, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 30999, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 30999, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"3\", \"is_finished\": false}"}
+{"t_ms": 31014, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 31015, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 31030, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 존재\", \"is_finished\": false}"}
+{"t_ms": 31030, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하여\", \"is_finished\": false}"}
+{"t_ms": 31050, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 지역\", \"is_finished\": false}"}
+{"t_ms": 31051, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 주민\", \"is_finished\": false}"}
+{"t_ms": 31067, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"들의\", \"is_finished\": false}"}
+{"t_ms": 31067, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 건강\", \"is_finished\": false}"}
+{"t_ms": 31070, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"권\", \"is_finished\": false}"}
+{"t_ms": 31070, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 31083, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 심\", \"is_finished\": false}"}
+{"t_ms": 31083, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"각\", \"is_finished\": false}"}
+{"t_ms": 31090, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"하게\", \"is_finished\": false}"}
+{"t_ms": 31090, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 위\", \"is_finished\": false}"}
+{"t_ms": 31107, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"협\", \"is_finished\": false}"}
+{"t_ms": 31107, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 31117, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 31117, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 있습니다\", \"is_finished\": false}"}
+{"t_ms": 31134, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 31134, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 유\", \"is_finished\": false}"}
+{"t_ms": 31149, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"동\", \"is_finished\": false}"}
+{"t_ms": 31149, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"인\", \"is_finished\": false}"}
+{"t_ms": 31167, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 31168, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 31176, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 많\", \"is_finished\": false}"}
+{"t_ms": 31177, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"아\", \"is_finished\": false}"}
+{"t_ms": 31190, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"질\", \"is_finished\": false}"}
+{"t_ms": 31190, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 경우\", \"is_finished\": false}"}
+{"t_ms": 31225, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 보\", \"is_finished\": false}"}
+{"t_ms": 31226, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"행\", \"is_finished\": false}"}
+{"t_ms": 31235, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"자의\", \"is_finished\": false}"}
+{"t_ms": 31236, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 31240, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"과\", \"is_finished\": false}"}
+{"t_ms": 31240, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 편\", \"is_finished\": false}"}
+{"t_ms": 31254, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 31255, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"성을\", \"is_finished\": false}"}
+{"t_ms": 31268, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 해\", \"is_finished\": false}"}
+{"t_ms": 31268, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"칠\", \"is_finished\": false}"}
+{"t_ms": 31283, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 31283, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 있으\", \"is_finished\": false}"}
+{"t_ms": 31296, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"므로\", \"is_finished\": false}"}
+{"t_ms": 31296, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 31307, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 31307, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 31340, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"지는\", \"is_finished\": false}"}
+{"t_ms": 31341, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \" 부\", \"is_finished\": false}"}
+{"t_ms": 31363, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"적\", \"is_finished\": false}"}
+{"t_ms": 31363, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"합\", \"is_finished\": false}"}
+{"t_ms": 31372, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \"합니다\", \"is_finished\": false}"}
+{"t_ms": 31373, "event": "message", "data": "{\"sender\": \"반대\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 31415, "event": "message", "data": "{\"sender\": \"\", \"text\": \"\\n\\n\", \"is_finished\": false}"}
+{"t_ms": 31972, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"후\", \"is_finished\": false}"}
+{"t_ms": 31973, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"보\", \"is_finished\": false}"}
+{"t_ms": 31998, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 31998, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 32018, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 대한\", \"is_finished\": false}"}
+{"t_ms": 32018, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 찬\", \"is_finished\": false}"}
+{"t_ms": 32076, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"반\", \"is_finished\": false}"}
+{"t_ms": 32076, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 의견\", \"is_finished\": false}"}
+{"t_ms": 32107, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 32107, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 분\", \"is_finished\": false}"}
+{"t_ms": 32110, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"명\", \"is_finished\": false}"}
+{"t_ms": 32111, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"히\", \"is_finished\": false}"}
+{"t_ms": 32118, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 나\", \"is_finished\": false}"}
+{"t_ms": 32118, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"뉘\", \"is_finished\": false}"}
+{"t_ms": 32142, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"었습니다\", \"is_finished\": false}"}
+{"t_ms": 32142, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 32151, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 찬\", \"is_finished\": false}"}
+{"t_ms": 32152, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"성\", \"is_finished\": false}"}
+{"t_ms": 32168, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 측\", \"is_finished\": false}"}
+{"t_ms": 32168, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 32181, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 32181, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"흡\", \"is_finished\": false}"}
+{"t_ms": 32194, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 32194, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 32222, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 32223, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 32235, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"는\", \"is_finished\": false}"}
+{"t_ms": 32236, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 32254, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 32254, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 32267, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 32267, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"에서\", \"is_finished\": false}"}
+{"t_ms": 32271, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 32272, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 32290, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 32290, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 이상\", \"is_finished\": false}"}
+{"t_ms": 32305, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 떨어\", \"is_finished\": false}"}
+{"t_ms": 32305, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"진\", \"is_finished\": false}"}
+{"t_ms": 32324, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 곳\", \"is_finished\": false}"}
+{"t_ms": 32324, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 32341, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 가능\", \"is_finished\": false}"}
+{"t_ms": 32341, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 32351, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 32351, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"다는\", \"is_finished\": false}"}
+{"t_ms": 32367, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 점\", \"is_finished\": false}"}
+{"t_ms": 32368, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 32369, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 강조\", \"is_finished\": false}"}
+{"t_ms": 32369, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하며\", \"is_finished\": false}"}
+{"t_ms": 32411, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 32412, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 32428, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 32429, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"로\", \"is_finished\": false}"}
+{"t_ms": 32446, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"휴\", \"is_finished\": false}"}
+{"t_ms": 32447, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 32469, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"통\", \"is_finished\": false}"}
+{"t_ms": 32470, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 32489, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"17\", \"is_finished\": false}"}
+{"t_ms": 32490, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 32503, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 32503, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 32520, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 공\", \"is_finished\": false}"}
+{"t_ms": 32521, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"공\", \"is_finished\": false}"}
+{"t_ms": 32534, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 32534, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 32549, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 증\", \"is_finished\": false}"}
+{"t_ms": 32549, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"진\", \"is_finished\": false}"}
+{"t_ms": 32576, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"할\", \"is_finished\": false}"}
+{"t_ms": 32577, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 것\", \"is_finished\": false}"}
+{"t_ms": 32594, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"이라고\", \"is_finished\": false}"}
+{"t_ms": 32595, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 주장\", \"is_finished\": false}"}
+{"t_ms": 32610, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 32610, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"였습니다\", \"is_finished\": false}"}
+{"t_ms": 32625, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 32626, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 32638, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"면\", \"is_finished\": false}"}
+{"t_ms": 32639, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 32654, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 32654, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"대\", \"is_finished\": false}"}
+{"t_ms": 32671, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 측\", \"is_finished\": false}"}
+{"t_ms": 32671, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"은\", \"is_finished\": false}"}
+{"t_ms": 32684, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 32685, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"버\", \"is_finished\": false}"}
+{"t_ms": 32698, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 32698, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 32712, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"류\", \"is_finished\": false}"}
+{"t_ms": 32712, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"소\", \"is_finished\": false}"}
+{"t_ms": 32726, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 32726, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 32741, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 32741, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"10\", \"is_finished\": false}"}
+{"t_ms": 32757, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 32757, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 이\", \"is_finished\": false}"}
+{"t_ms": 32771, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"내\", \"is_finished\": false}"}
+{"t_ms": 32771, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 32784, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 금\", \"is_finished\": false}"}
+{"t_ms": 32785, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 32802, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 32802, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"라는\", \"is_finished\": false}"}
+{"t_ms": 32815, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 조\", \"is_finished\": false}"}
+{"t_ms": 32815, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"례\", \"is_finished\": false}"}
+{"t_ms": 32829, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 32829, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 따라\", \"is_finished\": false}"}
+{"t_ms": 32843, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 32843, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 32861, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 불\", \"is_finished\": false}"}
+{"t_ms": 32862, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"가능\", \"is_finished\": false}"}
+{"t_ms": 32874, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 32875, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"다고\", \"is_finished\": false}"}
+{"t_ms": 32884, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 지\", \"is_finished\": false}"}
+{"t_ms": 32884, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"적\", \"is_finished\": false}"}
+{"t_ms": 32901, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하고\", \"is_finished\": false}"}
+{"t_ms": 32901, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 32916, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 32917, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"금\", \"is_finished\": false}"}
+{"t_ms": 32935, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 32936, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"구\", \"is_finished\": false}"}
+{"t_ms": 32949, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"역\", \"is_finished\": false}"}
+{"t_ms": 32950, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"이\", \"is_finished\": false}"}
+{"t_ms": 32963, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 반\", \"is_finished\": false}"}
+{"t_ms": 32963, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"경\", \"is_finished\": false}"}
+{"t_ms": 32977, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 32977, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"300\", \"is_finished\": false}"}
+{"t_ms": 32998, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"m\", \"is_finished\": false}"}
+{"t_ms": 32998, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 안\", \"is_finished\": false}"}
+{"t_ms": 33015, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 33016, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" \", \"is_finished\": false}"}
+{"t_ms": 33034, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"3\", \"is_finished\": false}"}
+{"t_ms": 33034, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"개\", \"is_finished\": false}"}
+{"t_ms": 33042, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 33042, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 존재\", \"is_finished\": false}"}
+{"t_ms": 33055, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하여\", \"is_finished\": false}"}
+{"t_ms": 33056, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 건강\", \"is_finished\": false}"}
+{"t_ms": 33070, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"권\", \"is_finished\": false}"}
+{"t_ms": 33070, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"에\", \"is_finished\": false}"}
+{"t_ms": 33086, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 심\", \"is_finished\": false}"}
+{"t_ms": 33087, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"각\", \"is_finished\": false}"}
+{"t_ms": 33097, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"한\", \"is_finished\": false}"}
+{"t_ms": 33097, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 영향을\", \"is_finished\": false}"}
+{"t_ms": 33109, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 미\", \"is_finished\": false}"}
+{"t_ms": 33109, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"칠\", \"is_finished\": false}"}
+{"t_ms": 33120, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 수\", \"is_finished\": false}"}
+{"t_ms": 33121, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 있다고\", \"is_finished\": false}"}
+{"t_ms": 33136, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 우\", \"is_finished\": false}"}
+{"t_ms": 33137, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"려\", \"is_finished\": false}"}
+{"t_ms": 33153, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하\", \"is_finished\": false}"}
+{"t_ms": 33154, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"였습니다\", \"is_finished\": false}"}
+{"t_ms": 33164, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 33165, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 이러한\", \"is_finished\": false}"}
+{"t_ms": 33176, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 점\", \"is_finished\": false}"}
+{"t_ms": 33176, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"들을\", \"is_finished\": false}"}
+{"t_ms": 33186, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 종\", \"is_finished\": false}"}
+{"t_ms": 33187, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"합\", \"is_finished\": false}"}
+{"t_ms": 33198, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"적으로\", \"is_finished\": false}"}
+{"t_ms": 33199, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 고려\", \"is_finished\": false}"}
+{"t_ms": 33213, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하여\", \"is_finished\": false}"}
+{"t_ms": 33214, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 33220, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 후보\", \"is_finished\": false}"}
+{"t_ms": 33221, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"지\", \"is_finished\": false}"}
+{"t_ms": 33233, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 33233, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" **\", \"is_finished\": false}"}
+{"t_ms": 33243, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"정\", \"is_finished\": false}"}
+{"t_ms": 33243, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"확\", \"is_finished\": false}"}
+{"t_ms": 33257, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"한\", \"is_finished\": false}"}
+{"t_ms": 33257, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 위치\", \"is_finished\": false}"}
+{"t_ms": 33270, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 재\", \"is_finished\": false}"}
+{"t_ms": 33270, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"조\", \"is_finished\": false}"}
+{"t_ms": 33293, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"사\", \"is_finished\": false}"}
+{"t_ms": 33293, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 후\", \"is_finished\": false}"}
+{"t_ms": 33307, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"**\", \"is_finished\": false}"}
+{"t_ms": 33307, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 흡\", \"is_finished\": false}"}
+{"t_ms": 33321, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"연\", \"is_finished\": false}"}
+{"t_ms": 33321, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"부\", \"is_finished\": false}"}
+{"t_ms": 33331, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"스\", \"is_finished\": false}"}
+{"t_ms": 33332, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 설치\", \"is_finished\": false}"}
+{"t_ms": 33346, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 가능\", \"is_finished\": false}"}
+{"t_ms": 33346, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 여부\", \"is_finished\": false}"}
+{"t_ms": 33354, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"를\", \"is_finished\": false}"}
+{"t_ms": 33354, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 검\", \"is_finished\": false}"}
+{"t_ms": 33368, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"토\", \"is_finished\": false}"}
+{"t_ms": 33368, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"하고\", \"is_finished\": false}"}
+{"t_ms": 33384, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \",\", \"is_finished\": false}"}
+{"t_ms": 33384, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 지역\", \"is_finished\": false}"}
+{"t_ms": 33404, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 주민\", \"is_finished\": false}"}
+{"t_ms": 33404, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"의\", \"is_finished\": false}"}
+{"t_ms": 33414, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 건강\", \"is_finished\": false}"}
+{"t_ms": 33414, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"과\", \"is_finished\": false}"}
+{"t_ms": 33419, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 안전\", \"is_finished\": false}"}
+{"t_ms": 33419, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"을\", \"is_finished\": false}"}
+{"t_ms": 33432, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 최\", \"is_finished\": false}"}
+{"t_ms": 33432, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"우\", \"is_finished\": false}"}
+{"t_ms": 33448, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"선\", \"is_finished\": false}"}
+{"t_ms": 33448, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"으로\", \"is_finished\": false}"}
+{"t_ms": 33458, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 하는\", \"is_finished\": false}"}
+{"t_ms": 33458, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 방향\", \"is_finished\": false}"}
+{"t_ms": 33500, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"으로\", \"is_finished\": false}"}
+{"t_ms": 33500, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \" 나\", \"is_finished\": false}"}
+{"t_ms": 33531, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"아\", \"is_finished\": false}"}
+{"t_ms": 33531, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"가\", \"is_finished\": false}"}
+{"t_ms": 33536, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \"겠습니다\", \"is_finished\": false}"}
+{"t_ms": 33537, "event": "message", "data": "{\"sender\": \"정부\", \"text\": \".\", \"is_finished\": false}"}
+{"t_ms": 33571, "event": "message", "data": "{\"sender\": \"\", \"text\": \"\\n\\n\", \"is_finished\": false}"}
+{"t_ms": 36474, "event": "message", "data": "{\"sender\": \"시스템\", \"text\": \"🎉 모의 심의 토론이 최종 종료되었습니다.\\n\\n📌 [최종 시나리오 결과: B - 조건부 타결 / 정부 강제 중재]\\n• 갈등 민감도 지수(CSS): 7.5 / 10.0\\n• 최종 수용도 점수: 60.0%\\n• 갈등 위험 지수: 55.0점 (찬반 의견이 뚜렷하여 갈등 가능성이 존재함.)\\n\\n📊 [주요 갈등 인자 및 가중치 (Conflict Factors)]\\n  • 버스정류장 승하차 인원 통계로, 흡연부스 설치 수요를 가늠하는 지표로 사용될 수 있다.: 15.0%\\n  • 지하철역별 승하차 인원 통계로, 흡연부스 설치 수요를 가늠하는 지표로 사용될 수 있다.: 15.0%\\n  • 이 데이터는 흡연부스 설치 수요를 파악하기 위한 생활인구 통계로 사용됩니다.: 13.0%\\n  • 이 데이터는 흡연부스 입지에서 지하철역 주변의 유동인구 거점으로서의 역할을 한다.: 15.0%\\n  • 이 데이터는 흡연부스 입지에서 버스정류소 위치로 인한 유동인구 수요와 금연구역 배제를 동시에 고려해야 한다.: 13.0%\\n  • 이 데이터는 흡연부스 입지에서 가로휴지통의 위치를 통해 설치 수요를 높이는 긍정적 요인으로 작용할 수 있다.: 5.0%\\n  • 이 데이터는 흡연부스 설치 수요를 높이는 요인으로, 담배꽁초 무단투기 지역을 나타냅니다.: 13.0%\\n  • 서울특별시 내 상가 및 상권 정보로, 흡연부스 설치 수요를 파악하는 데 유용한 데이터입니다.: 13.0%\\n\\n📝 [시나리오 요약]\\n회의에서는 흡연부스 설치에 대한 찬반 의견이 뚜렷하게 나뉘었습니다. 찬성 측은 흡연부스 설치가 금연구역에서 10m 이상 떨어진 곳에 가능하다는 점과 가로휴지통이 많아 공공 안전을 증진할 것이라고 주장했습니다. 반면, 반대 측은 조례에 따라 버스정류소 반경 10m 이내에 설치가 불가능하다는 점과 금연구역이 근처에 있어 건강권을 위협할 수 있다고 지적했습니다. 이러한 상황을 고려하여, 후보지의 정확한 위치를 재조사하고 흡연부스 설치 가능 여부를 다시 검토하는 것이 필요하다는 결론에 도달했습니다.\\n\\n💡 [도출 사유]\\n찬반 의견이 명확히 나뉘고, 조건부 수용 가능성이 제기되어 정부의 중재가 필요함.\\n\\n\", \"is_finished\": true}"}
