@@ -108,6 +108,12 @@ const nextConfig: NextConfig = {
    * 계약 4절("가공하지 않고 그대로")이 프런트에서 깨진다.
    */
   async rewrites() {
+    /**
+     * DEMO 빌드(`NEXT_PUBLIC_DEMO_RUN`)에는 백엔드가 없다. 브라우저의 `/api/v1/*` 는
+     * `src/instrumentation-client.ts` 가 녹화로 답하므로 여기까지 오지 않고, 온다면
+     * 그건 재생 밖의 요청이다 — `127.0.0.1:8000` 같은 기본값으로 넘기지 않고 404 로 둔다.
+     */
+    if (process.env.NEXT_PUBLIC_DEMO_RUN) return [];
     return [
       {
         source: "/api/v1/pipeline/:path*",
